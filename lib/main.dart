@@ -20,6 +20,8 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           bodyText1: TextStyle(fontSize: 14),
         ),
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
       ),
       routes: routes,
       initialRoute: '/login',
