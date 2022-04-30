@@ -41,7 +41,10 @@ class _HeadState extends State<Head> {
           margin: const EdgeInsets.only(top: 12),
           height: 50,
           child: TextField(
+            keyboardType: TextInputType.phone,
+            maxLength: 11,
             decoration: InputDecoration(
+              counterText: "",
               hintText: "请输入手机号码",
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 0, horizontal: 16),

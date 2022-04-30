@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_dating_template/pages/login/widgets/head.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
 
@@ -14,78 +15,88 @@ class _LoginState extends State<PasswordLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.symmetric(horizontal: 26),
-          margin: const EdgeInsets.only(bottom: 56),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Head(),
-              buildPassWord(),
-              loginButton(),
-              Container(
-                margin: const EdgeInsets.only(top: 16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Opacity(
-                      opacity: 0,
-                      child: Text(
-                        "忘记密码?",
-                        style: TextStyle(
-                          color: WcaoTheme.placeholder,
-                          fontSize: 12,
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.pushReplacementNamed(
-                            context, '/verify-code-login');
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
+        child: InkWell(
+          onTap: () {
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
+          child: Container(
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.symmetric(horizontal: 26),
+            margin: const EdgeInsets.only(bottom: 56),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Head(),
+                buildPassWord(),
+                loginButton(),
+                Container(
+                  margin: const EdgeInsets.only(top: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Opacity(
+                        opacity: 0,
                         child: Text(
-                          "免密登录",
+                          "忘记密码?",
                           style: TextStyle(
-                            color: WcaoTheme.primaryFocus,
-                            fontWeight: FontWeight.w500,
+                            color: WcaoTheme.placeholder,
+                            fontSize: 12,
                           ),
                         ),
                       ),
-                    ),
-                    Text(
-                      "忘记密码?",
-                      style: TextStyle(
-                        color: WcaoTheme.placeholder,
-                        fontSize: 12,
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(
+                              context, '/verify-code-login');
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "免密登录",
+                            style: TextStyle(
+                              color: WcaoTheme.primaryFocus,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
                       ),
-                    )
-                  ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/forget-password');
+                        },
+                        child: Text(
+                          "忘记密码?",
+                          style: TextStyle(
+                            color: WcaoTheme.secondary,
+                            fontSize: 12,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(top: 16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "登录即同意",
-                      style: TextStyle(color: WcaoTheme.placeholder),
-                    ),
-                    InkWell(child: const Text('《用户协议》'), onTap: () {}),
-                    Text(
-                      "及",
-                      style: TextStyle(color: WcaoTheme.placeholder),
-                    ),
-                    InkWell(child: const Text('《隐私政策》'), onTap: () {}),
-                  ],
+                Container(
+                  margin: const EdgeInsets.only(top: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "登录即同意",
+                        style: TextStyle(color: WcaoTheme.placeholder),
+                      ),
+                      InkWell(child: const Text('《用户协议》'), onTap: () {}),
+                      Text(
+                        "及",
+                        style: TextStyle(color: WcaoTheme.placeholder),
+                      ),
+                      InkWell(child: const Text('《隐私政策》'), onTap: () {}),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

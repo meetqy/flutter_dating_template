@@ -10,7 +10,9 @@ class WcaoTheme {
   /// 文字主色
   static Color base = const Color(0xff323232);
 
-  /// 次色
+  static Color secondary = const Color(0xff949494);
+
+  /// 辅助文字
   static Color placeholder = const Color(0xffcccccc);
 
   /// outline

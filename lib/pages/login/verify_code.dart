@@ -14,52 +14,57 @@ class _LoginState extends State<VerifyCodeLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.symmetric(horizontal: 26),
-          margin: const EdgeInsets.only(bottom: 56),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Head(),
-              buildVerifyCode(),
-              loginButton(),
-              InkWell(
-                onTap: () {
-                  Navigator.pushReplacementNamed(context, '/password-login');
-                },
-                child: Container(
-                  margin: const EdgeInsets.only(top: 16),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "密码登录",
-                    style: TextStyle(
-                      color: WcaoTheme.primaryFocus,
-                      fontWeight: FontWeight.w500,
+        child: InkWell(
+          onTap: () {
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
+          child: Container(
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.symmetric(horizontal: 26),
+            margin: const EdgeInsets.only(bottom: 56),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Head(),
+                buildVerifyCode(),
+                loginButton(),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushReplacementNamed(context, '/password-login');
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 16),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "密码登录",
+                      style: TextStyle(
+                        color: WcaoTheme.primaryFocus,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(top: 16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "登录即同意",
-                      style: TextStyle(color: WcaoTheme.placeholder),
-                    ),
-                    InkWell(child: const Text('《用户协议》'), onTap: () {}),
-                    Text(
-                      "及",
-                      style: TextStyle(color: WcaoTheme.placeholder),
-                    ),
-                    InkWell(child: const Text('《隐私政策》'), onTap: () {}),
-                  ],
+                Container(
+                  margin: const EdgeInsets.only(top: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "登录即同意",
+                        style: TextStyle(color: WcaoTheme.placeholder),
+                      ),
+                      InkWell(child: const Text('《用户协议》'), onTap: () {}),
+                      Text(
+                        "及",
+                        style: TextStyle(color: WcaoTheme.placeholder),
+                      ),
+                      InkWell(child: const Text('《隐私政策》'), onTap: () {}),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
