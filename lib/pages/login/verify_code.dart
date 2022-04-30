@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/login/widgets/head.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
 
-class VerifyCodeLogin extends StatefulWidget {
-  const VerifyCodeLogin({Key? key}) : super(key: key);
+class LoginVerifyCode extends StatefulWidget {
+  const LoginVerifyCode({Key? key}) : super(key: key);
 
   @override
-  State<VerifyCodeLogin> createState() => _LoginState();
+  State<LoginVerifyCode> createState() => _LoginState();
 }
 
-class _LoginState extends State<VerifyCodeLogin> {
+class _LoginState extends State<LoginVerifyCode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,7 @@ class _LoginState extends State<VerifyCodeLogin> {
                 loginButton(),
                 InkWell(
                   onTap: () {
-                    Navigator.pushReplacementNamed(context, '/password-login');
+                    Navigator.pushReplacementNamed(context, '/password/login');
                   },
                   child: Container(
                     margin: const EdgeInsets.only(top: 16),

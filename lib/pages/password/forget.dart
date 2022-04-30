@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
 
-class ForgetPassWord extends StatefulWidget {
-  const ForgetPassWord({Key? key}) : super(key: key);
+class PasswordForget extends StatefulWidget {
+  const PasswordForget({Key? key}) : super(key: key);
 
   @override
-  State<ForgetPassWord> createState() => _ForgetPassWordState();
+  State<PasswordForget> createState() => _ForgetPassWordState();
 }
 
-class _ForgetPassWordState extends State<ForgetPassWord> {
+class _ForgetPassWordState extends State<PasswordForget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,18 +67,23 @@ class _ForgetPassWordState extends State<ForgetPassWord> {
                     ),
                   ),
                 ),
-                Container(
-                  height: 50,
-                  margin: const EdgeInsets.only(top: 36),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: WcaoTheme.radius,
-                    color: WcaoTheme.primary,
-                  ),
-                  alignment: Alignment.center,
-                  child: const Text(
-                    '确认',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/password/new-set');
+                  },
+                  child: Container(
+                    height: 50,
+                    margin: const EdgeInsets.only(top: 36),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: WcaoTheme.radius,
+                      color: WcaoTheme.primary,
+                    ),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      '确认',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
                   ),
                 )
               ],

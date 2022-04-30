@@ -17,7 +17,9 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 ## 素材来源
 
-[社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)，虽然已经购买了原型，但是不知道是否侵权。如果有了解的同学欢迎交流一下。
+[社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)
+
+![](./assets/1.png)
 
 ## 任务进度
 

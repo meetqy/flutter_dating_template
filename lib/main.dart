@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Colors.transparent,
       ),
       routes: routes,
-      initialRoute: '/verify-code-login',
+      initialRoute: '/password/forget',
     );
   }
 }
