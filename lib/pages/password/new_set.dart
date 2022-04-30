@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dating_template/utils/base.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
 
 class PasswordNewSet extends StatefulWidget {
-  PasswordNewSet({Key? key}) : super(key: key);
+  const PasswordNewSet({Key? key}) : super(key: key);
 
   @override
   State<PasswordNewSet> createState() => _NewPasswordState();
@@ -69,18 +70,24 @@ class _NewPasswordState extends State<PasswordNewSet> {
                   ),
                 ),
               ),
-              Container(
-                height: 50,
-                margin: const EdgeInsets.only(top: 36),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: WcaoTheme.radius,
-                  color: WcaoTheme.primary,
-                ),
-                alignment: Alignment.center,
-                child: const Text(
-                  '确认',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+              InkWell(
+                onTap: () async {
+                  await UtillBase.toast('密码重置成功！');
+                  Navigator.pushNamed(context, '/login/password');
+                },
+                child: Container(
+                  height: 50,
+                  margin: const EdgeInsets.only(top: 36),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: WcaoTheme.radius,
+                    color: WcaoTheme.primary,
+                  ),
+                  alignment: Alignment.center,
+                  child: const Text(
+                    '确认',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
               )
             ],

@@ -8,5 +8,5 @@ Map<String, WidgetBuilder> routes = {
   '/login/verify-code': (context) => const LoginVerifyCode(),
   '/login/password': (context) => const LoginPassword(),
   '/password/forget': (context) => const PasswordForget(),
-  '/password/new-set': (context) => PasswordNewSet(),
+  '/password/new-set': (context) => const PasswordNewSet(),
 };
