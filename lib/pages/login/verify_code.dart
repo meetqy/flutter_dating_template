@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dating_template/pages/login/widgets/head.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class VerifyCodeLogin extends StatefulWidget {
+  const VerifyCodeLogin({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<VerifyCodeLogin> createState() => _LoginState();
 }
 
-class _LoginState extends State<Login> {
+class _LoginState extends State<VerifyCodeLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,25 +22,22 @@ class _LoginState extends State<Login> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                '登录/注册',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w500,
-                  color: WcaoTheme.base,
-                ),
-              ),
-              buildPhone(),
+              const Head(),
               buildVerifyCode(),
-              buildLogin(),
-              Container(
-                margin: const EdgeInsets.only(top: 16),
-                alignment: Alignment.center,
-                child: Text(
-                  '密码登录',
-                  style: TextStyle(
-                    color: WcaoTheme.primaryFocus,
-                    fontWeight: FontWeight.w500,
+              loginButton(),
+              InkWell(
+                onTap: () {
+                  Navigator.pushReplacementNamed(context, '/password-login');
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(top: 16),
+                  alignment: Alignment.center,
+                  child: Text(
+                    "密码登录",
+                    style: TextStyle(
+                      color: WcaoTheme.primaryFocus,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),
@@ -68,40 +66,17 @@ class _LoginState extends State<Login> {
     );
   }
 
-  InkWell buildLogin() {
-    return InkWell(
-      onTap: () {
-        // TODO: login
-      },
-      child: Container(
-        margin: const EdgeInsets.only(top: 36),
-        alignment: Alignment.center,
-        width: double.infinity,
-        height: 44,
-        decoration: BoxDecoration(
-          color: WcaoTheme.primary,
-          borderRadius: WcaoTheme.radius,
-        ),
-        child: const Text(
-          '登录',
-          style: TextStyle(
-              fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white),
-        ),
-      ),
-    );
-  }
-
-  /// 手机号
-  Column buildPhone() {
+  /// 密码登录
+  Column buildPassWord() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 36),
+          margin: const EdgeInsets.only(top: 12),
           child: Wrap(
             children: [
               Text(
-                '手机号码',
+                '密码',
                 style: TextStyle(
                   fontSize: 14,
                   color: WcaoTheme.placeholder,
@@ -139,6 +114,30 @@ class _LoginState extends State<Login> {
     );
   }
 
+  /// 登录按钮
+  InkWell loginButton() {
+    return InkWell(
+      onTap: () {
+        // TODO: login
+      },
+      child: Container(
+        margin: const EdgeInsets.only(top: 36),
+        alignment: Alignment.center,
+        width: double.infinity,
+        height: 44,
+        decoration: BoxDecoration(
+          color: WcaoTheme.primary,
+          borderRadius: WcaoTheme.radius,
+        ),
+        child: const Text(
+          '登录',
+          style: TextStyle(
+              fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white),
+        ),
+      ),
+    );
+  }
+
   /// 验证码
   Column buildVerifyCode() {
     return Column(
@@ -165,7 +164,12 @@ class _LoginState extends State<Login> {
               margin: const EdgeInsets.only(top: 12),
               height: 50,
               child: TextField(
+                keyboardType: TextInputType.number,
+                maxLines: 1,
+                maxLength: 6,
                 decoration: InputDecoration(
+                  counterText: "",
+                  hintText: "请输入验证码",
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
                   enabledBorder: OutlineInputBorder(
