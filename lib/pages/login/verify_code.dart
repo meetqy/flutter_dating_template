@@ -31,7 +31,7 @@ class _LoginState extends State<LoginVerifyCode> {
                 loginButton(),
                 InkWell(
                   onTap: () {
-                    Navigator.pushReplacementNamed(context, '/password/login');
+                    Navigator.pushReplacementNamed(context, '/login/password');
                   },
                   child: Container(
                     margin: const EdgeInsets.only(top: 16),
@@ -54,12 +54,20 @@ class _LoginState extends State<LoginVerifyCode> {
                         "登录即同意",
                         style: TextStyle(color: WcaoTheme.placeholder),
                       ),
-                      InkWell(child: const Text('《用户协议》'), onTap: () {}),
+                      InkWell(
+                        child: const Text('《用户协议》'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, "/agreement/user"),
+                      ),
                       Text(
                         "及",
                         style: TextStyle(color: WcaoTheme.placeholder),
                       ),
-                      InkWell(child: const Text('《隐私政策》'), onTap: () {}),
+                      InkWell(
+                        child: const Text('《隐私政策》'),
+                        onTap: () =>
+                            Navigator.pushNamed(context, "/agreement/privacy"),
+                      ),
                     ],
                   ),
                 ),

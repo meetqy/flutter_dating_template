@@ -16,6 +16,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: '社区交友APP',
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+          titleTextStyle: TextStyle(
+            color: WcaoTheme.base,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+          iconTheme: IconThemeData(
+            color: WcaoTheme.base,
+            size: 18,
+          ),
+        ),
         primaryColor: WcaoTheme.primary,
         backgroundColor: Colors.white,
         textTheme: const TextTheme(
@@ -25,7 +37,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Colors.transparent,
       ),
       routes: routes,
-      initialRoute: '/password/forget',
+      initialRoute: '/login/verify-code',
       builder: EasyLoading.init(),
     );
   }

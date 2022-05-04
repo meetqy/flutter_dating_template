@@ -63,7 +63,7 @@ class _LoginState extends State<LoginPassword> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, '/forget-password');
+                          Navigator.pushNamed(context, '/password/forget');
                         },
                         child: Text(
                           "忘记密码?",
