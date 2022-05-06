@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
       ),
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 24),
+          padding: const EdgeInsets.only(top: 24),
           child: Swiper(
             itemCount: swipers.length,
             itemBuilder: (context, index) {
@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
                 child: Stack(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(left: 24, right: 24),
+                      margin: const EdgeInsets.symmetric(horizontal: 24),
                       child: Opacity(
                         opacity: .75,
                         child: ClipRRect(
@@ -176,6 +176,68 @@ class _HomeState extends State<Home> {
               );
             },
           ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        shape: const CircularNotchedRectangle(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              padding: const EdgeInsets.all(0),
+              icon: Column(
+                children: const [
+                  Icon(Icons.home_filled),
+                  Text('首页'),
+                ],
+              ),
+              onPressed: () {},
+            ),
+            IconButton(
+              padding: const EdgeInsets.all(0),
+              icon: Column(
+                children: const [
+                  Icon(Icons.access_alarm),
+                  Text('社区'),
+                ],
+              ),
+              onPressed: () {},
+            ),
+            // Container(
+            //   width: 64,
+            // ),
+            const SizedBox(
+              width: 48,
+            ),
+            // const Spacer(),
+            IconButton(
+              padding: const EdgeInsets.all(0),
+              icon: Column(
+                children: const [
+                  Icon(Icons.message_sharp),
+                  Text('消息'),
+                ],
+              ),
+              onPressed: () {},
+            ),
+            IconButton(
+              padding: const EdgeInsets.all(0),
+              icon: Column(
+                children: const [
+                  Icon(Icons.person),
+                  Text('社区'),
+                ],
+              ),
+              onPressed: () {},
+            ),
+          ],
         ),
       ),
     );
