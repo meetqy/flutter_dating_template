@@ -21,4 +21,10 @@ class WcaoTheme {
 
   /// radius
   static BorderRadius radius = BorderRadius.circular(8);
+
+  /// fontSize base
+  static double fsBase = 14;
+
+  /// fontSize sm
+  static double fsSm = 12;
 }

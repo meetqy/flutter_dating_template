@@ -29,15 +29,15 @@ class MyApp extends StatelessWidget {
           ),
         ),
         primaryColor: WcaoTheme.primary,
-        backgroundColor: Colors.white,
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(fontSize: 14),
+        backgroundColor: Colors.transparent,
+        textTheme: TextTheme(
+          bodyText1: TextStyle(fontSize: WcaoTheme.fsBase),
         ),
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent,
       ),
       routes: routes,
-      initialRoute: '/login/verify-code',
+      initialRoute: '/home',
       builder: EasyLoading.init(),
     );
   }
