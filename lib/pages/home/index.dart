@@ -179,6 +179,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: WcaoTheme.primary,
         onPressed: () {},
         child: const Icon(
           Icons.add,
