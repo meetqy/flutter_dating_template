@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
           color: Colors.white,
           titleTextStyle: TextStyle(
             color: WcaoTheme.base,
-            fontSize: 18,
+            fontSize: WcaoTheme.fsXl,
             fontWeight: FontWeight.w500,
           ),
           iconTheme: IconThemeData(
             color: WcaoTheme.base,
-            size: 18,
+            size: WcaoTheme.fsXl,
           ),
         ),
         primaryColor: WcaoTheme.primary,
@@ -36,10 +36,23 @@ class MyApp extends StatelessWidget {
         ),
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent,
+
+        /// textButton 点击波纹
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
             overlayColor: MaterialStateProperty.all(Colors.transparent),
           ),
+        ),
+
+        /// 取消slider间距
+        sliderTheme: SliderThemeData(
+          trackHeight: 12,
+          overlayShape: SliderComponentShape.noOverlay,
+          activeTrackColor: WcaoTheme.primary,
+          inactiveTrackColor: WcaoTheme.primary.withOpacity(.2),
+          thumbColor: WcaoTheme.primary,
+          valueIndicatorColor: WcaoTheme.primary,
+          inactiveTickMarkColor: WcaoTheme.primary,
         ),
       ),
       getPages: getRoutes,

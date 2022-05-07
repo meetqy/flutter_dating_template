@@ -200,7 +200,7 @@ class _PageViewIndexState extends State<PageViewIndex> {
       onTap: () {
         /// 弹出search
         showModalBottomSheet(
-          builder: (context) => SearchDialog(),
+          builder: (context) => const SearchDialog(),
           context: context,
           isScrollControlled: true,
         );

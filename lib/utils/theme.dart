@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+/// 主题相近的颜色如何处理？
+///
+/// ```
+/// WcaoTheme.primay.withOpacity(.5);
+/// ```
+
 class WcaoTheme {
   /// 主色
   static Color primary = const Color(0xff937DFF);
@@ -25,9 +31,12 @@ class WcaoTheme {
   /// fontSize base
   static double fsBase = 14;
 
-  /// fontSize sm
+  /// fontSize l 小标题
+  static double fsL = 16;
+
+  /// fontSize sm 次要文字
   static double fsSm = 12;
 
-  /// title
+  /// fontSize xl 标题
   static double fsXl = 18;
 }
