@@ -27,4 +27,7 @@ class WcaoTheme {
 
   /// fontSize sm
   static double fsSm = 12;
+
+  /// title
+  static double fsXl = 18;
 }

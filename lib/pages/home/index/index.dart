@@ -1,6 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/config.dart';
+import 'package:flutter_dating_template/pages/home/index/search_dialog.dart';
 import 'package:flutter_dating_template/utils/base.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
 
@@ -194,23 +195,33 @@ class _PageViewIndexState extends State<PageViewIndex> {
     );
   }
 
-  Row appBarTitle() {
-    return Row(children: [
-      Text(
-        '匹配条件',
-        style: TextStyle(fontSize: WcaoTheme.fsBase),
-      ),
-      Container(
-        margin: const EdgeInsets.only(left: 4),
-        child: Transform.rotate(
-          angle: -math.pi / 2,
-          child: Icon(
-            Icons.arrow_back_ios_new,
-            size: WcaoTheme.fsBase,
+  Widget appBarTitle() {
+    return InkWell(
+      onTap: () {
+        /// 弹出search
+        showModalBottomSheet(
+          builder: (context) => SearchDialog(),
+          context: context,
+          isScrollControlled: true,
+        );
+      },
+      child: Row(children: [
+        Text(
+          '匹配条件',
+          style: TextStyle(fontSize: WcaoTheme.fsBase),
+        ),
+        Container(
+          margin: const EdgeInsets.only(left: 4),
+          child: Transform.rotate(
+            angle: -math.pi / 2,
+            child: Icon(
+              Icons.arrow_back_ios_new,
+              size: WcaoTheme.fsBase,
+            ),
           ),
         ),
-      ),
-    ]);
+      ]),
+    );
   }
 
   Container tag(String str) {

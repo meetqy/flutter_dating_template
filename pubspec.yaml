@@ -37,6 +37,7 @@ dependencies:
   flutter_easyloading: ^3.0.3
   card_swiper: ^2.0.3
   cached_network_image: ^3.2.0
+  get: ^4.6.1
 
 dev_dependencies:
   flutter_test:

@@ -43,6 +43,7 @@ class _HomeState extends State<Home> {
           Icons.add,
         ),
       ),
+      resizeToAvoidBottomInset: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
