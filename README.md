@@ -15,11 +15,13 @@ Engine • revision 57d3bac3dd
 Tools • Dart 2.16.2 • DevTools 2.9.2
 ```
 
-## 素材来源
+## 所用插件及作用
 
-[社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)
+> 项目中所用的插件，均支持空安全。
 
-![](./assets/1.png)
+| 插件名                                                                  | 作用       |
+| ----------------------------------------------------------------------- | ---------- |
+| [flutter_native_splash](https://pub.dev/packages/flutter_native_splash) | 设置启动页 |
 
 ## 任务进度
 
@@ -46,3 +48,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [ ] 编辑资料
 - [ ] 好友/粉丝
 - [ ] 访客
+
+## 原型来源
+
+[社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)，有上线的需求可能需要提前询问作者。

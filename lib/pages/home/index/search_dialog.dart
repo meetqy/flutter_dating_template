@@ -10,6 +10,7 @@ class SearchDialog extends StatefulWidget {
 
 class _SearchDialogState extends State<SearchDialog> {
   double age = 18;
+  List<String> sex = ['男', '女', '不限'];
 
   @override
   Widget build(BuildContext context) {
@@ -39,43 +40,55 @@ class _SearchDialogState extends State<SearchDialog> {
               style: TextStyle(color: WcaoTheme.secondary),
             ),
           ),
+          setAge(),
           Container(
             margin: const EdgeInsets.only(top: 24),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '年龄',
-                      style: TextStyle(
-                        fontSize: WcaoTheme.fsL,
-                      ),
-                    ),
-                    Text(
-                      "18-45",
-                      style: TextStyle(
-                        fontSize: WcaoTheme.fsL,
-                      ),
-                    )
-                  ],
+            child: Text(
+              '其他条件',
+              style: TextStyle(color: WcaoTheme.secondary),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container setAge() {
+    return Container(
+      margin: const EdgeInsets.only(top: 24),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '年龄',
+                style: TextStyle(
+                  fontSize: WcaoTheme.fsL,
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 24),
-                  child: Slider(
-                    min: 18,
-                    max: 45,
-                    value: age,
-                    divisions: 27,
-                    label: age.round().toString(),
-                    onChanged: (value) {
-                      setState(() {
-                        age = value;
-                      });
-                    },
-                  ),
-                )
-              ],
+              ),
+              Text(
+                "18-45",
+                style: TextStyle(
+                  fontSize: WcaoTheme.fsL,
+                ),
+              )
+            ],
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 24),
+            child: Slider(
+              min: 18,
+              max: 45,
+              value: age,
+              divisions: 27,
+              label: age.round().toString(),
+              onChanged: (value) {
+                /// HACK: 设置年龄
+                setState(() {
+                  age = value;
+                });
+              },
             ),
           )
         ],
