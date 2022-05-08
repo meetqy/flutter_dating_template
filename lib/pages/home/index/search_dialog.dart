@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:group_button/group_button.dart';
 
 class SearchDialog extends StatefulWidget {
   const SearchDialog({Key? key}) : super(key: key);
@@ -11,6 +12,21 @@ class SearchDialog extends StatefulWidget {
 class _SearchDialogState extends State<SearchDialog> {
   double age = 18;
   List<String> sex = ['男', '女', '不限'];
+  List<String> edu = ["小学", "初中", "高中", "大学"];
+  List<String> constellation = [
+    "白羊座",
+    "金牛座",
+    "双子座",
+    "巨蟹座",
+    "狮子座",
+    "处女座",
+    "天秤座",
+    "天蝎座",
+    "射手座",
+    "摩羯座",
+    "水瓶座",
+    "双鱼座",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +64,104 @@ class _SearchDialogState extends State<SearchDialog> {
               style: TextStyle(color: WcaoTheme.secondary),
             ),
           ),
+          setSex(),
+          setEdu(),
+          setConstellation()
         ],
+      ),
+    );
+  }
+
+  /// 星座
+  Column setConstellation() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: const EdgeInsets.only(top: 24),
+          child: Text(
+            '星座',
+            style: TextStyle(fontSize: WcaoTheme.fsL),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 12),
+          child: GroupButton(
+            isRadio: false,
+            buttons: constellation,
+            options: groupButtonOptions(),
+          ),
+        )
+      ],
+    );
+  }
+
+  /// 学历
+  Column setEdu() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: const EdgeInsets.only(top: 24),
+          child: Text(
+            '学历',
+            style: TextStyle(fontSize: WcaoTheme.fsL),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 12),
+          child: GroupButton(
+            buttons: edu,
+            options: groupButtonOptions(),
+          ),
+        )
+      ],
+    );
+  }
+
+  /// 性别
+  Column setSex() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: const EdgeInsets.only(top: 24),
+          child: Text(
+            '性别',
+            style: TextStyle(fontSize: WcaoTheme.fsL),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 12),
+          child: GroupButton(
+            buttons: sex,
+            options: groupButtonOptions(),
+          ),
+        )
+      ],
+    );
+  }
+
+  /// group button 默认设置
+  GroupButtonOptions groupButtonOptions() {
+    return GroupButtonOptions(
+      elevation: 0,
+      mainGroupAlignment: MainGroupAlignment.start,
+      textPadding: const EdgeInsets.symmetric(vertical: 2, horizontal: 12),
+      runSpacing: 0,
+      spacing: 12,
+      borderRadius: BorderRadius.circular(6),
+      unselectedColor: WcaoTheme.outline.withOpacity(.25),
+      selectedColor: WcaoTheme.primary.withOpacity(.2),
+      unselectedBorderColor: WcaoTheme.outline,
+      selectedBorderColor: WcaoTheme.primary,
+      unselectedTextStyle: TextStyle(
+        color: WcaoTheme.base.withOpacity(.85),
+        fontSize: WcaoTheme.fsSm,
+      ),
+      selectedTextStyle: TextStyle(
+        color: WcaoTheme.primary,
+        fontSize: WcaoTheme.fsSm,
       ),
     );
   }
@@ -112,7 +225,10 @@ class _SearchDialogState extends State<SearchDialog> {
       ),
       actions: [
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            /// HACK: 匹配条件确认
+            Navigator.pop(context);
+          },
           child: Text(
             '确定',
             style: TextStyle(

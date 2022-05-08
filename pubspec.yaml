@@ -39,6 +39,7 @@ dependencies:
   cached_network_image: ^3.2.0
   get: ^4.6.1
   flutter_native_splash: ^2.1.6
+  group_button: ^5.0.1
 
 dev_dependencies:
   flutter_test:

@@ -184,6 +184,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "4.6.1"
+  group_button:
+    dependency: "direct main"
+    description:
+      name: group_button
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "5.0.1"
   http:
     dependency: transitive
     description:

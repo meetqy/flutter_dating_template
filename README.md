@@ -19,14 +19,17 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 > 项目中所用的插件，均支持空安全。
 
-| 插件名                                                                  | 作用       |
-| ----------------------------------------------------------------------- | ---------- |
-| [flutter_native_splash](https://pub.dev/packages/flutter_native_splash) | 设置启动页 |
+| 插件名                                                                  | 作用           |
+| ----------------------------------------------------------------------- | -------------- |
+| [flutter_native_splash](https://pub.dev/packages/flutter_native_splash) | 设置启动页     |
+| [group_button](https://pub.dev/packages/group_button)                   | checkbox group |
 
 ## 任务进度
 
 - [x] 登录
-- [ ] 启动页
+- [x] 启动页
+- [x] 首页
+- [x] 匹配条件
 - [ ] 发现
 - [ ] 历史匹配
 - [ ] 社区
