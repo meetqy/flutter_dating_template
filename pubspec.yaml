@@ -40,6 +40,8 @@ dependencies:
   get: ^4.6.1
   flutter_native_splash: ^2.1.6
   group_button: ^5.0.1
+  pull_to_refresh: ^2.0.0
+  dart_mock: ^2.0.0
 
 dev_dependencies:
   flutter_test:

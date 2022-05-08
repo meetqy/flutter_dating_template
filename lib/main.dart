@@ -38,6 +38,8 @@ class _MyAppState extends State<MyApp> {
       title: '社区交友APP',
       theme: ThemeData(
         appBarTheme: AppBarTheme(
+          elevation: 0,
+          centerTitle: true,
           color: Colors.white,
           titleTextStyle: TextStyle(
             color: WcaoTheme.base,
@@ -76,8 +78,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       getPages: getRoutes,
-      routes: routes,
-      initialRoute: '/home',
+      initialRoute: '/history-match',
       builder: EasyLoading.init(),
     );
   }
