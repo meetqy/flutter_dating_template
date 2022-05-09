@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/history_match/mock.dart';
+import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class HistoryMatch extends StatefulWidget {
@@ -16,16 +18,29 @@ class _HistoryMatchState extends State<HistoryMatch> {
 
   void _onRefresh() async {
     // monitor network fetch
-    await Future.delayed(const Duration(milliseconds: 1000));
-    // if failed,use refreshFailed()
+    await Future.delayed(const Duration(seconds: 1));
+
+    setState(() {
+      MockHistoryMatch.clean();
+      items = MockHistoryMatch.get();
+    });
+
     _refreshController.refreshCompleted();
   }
 
   void _onLoading() async {
-    // monitor network fetch
-    await Future.delayed(const Duration(milliseconds: 1000));
-    // if failed,use loadFailed(),if no data return,use LoadNodata()
-    if (mounted) setState(() {});
+    await Future.delayed(const Duration(seconds: 1));
+
+    if (items.length > 120) {
+      return _refreshController.loadNoData();
+    }
+
+    if (mounted) {
+      setState(() {
+        items = MockHistoryMatch.get();
+      });
+    }
+
     _refreshController.loadComplete();
   }
 
@@ -52,9 +67,65 @@ class _HistoryMatchState extends State<HistoryMatch> {
         onRefresh: _onRefresh,
         onLoading: _onLoading,
         child: GridView.count(
-          crossAxisCount: items.length,
+          padding: const EdgeInsets.all(12),
+          mainAxisSpacing: 4,
+          crossAxisSpacing: 4,
+          crossAxisCount: 2,
+          childAspectRatio: 0.9,
           children: items.map((item) {
-            return Center(child: Text(item.nickName));
+            return Card(
+              child: Stack(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: ClipRRect(
+                      borderRadius: WcaoTheme.radius,
+                      child: SvgPicture.network(
+                        item.avatar,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    child: Container(
+                      color: Colors.black.withOpacity(.15),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            child: Text(
+                              item.nickName,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: WcaoTheme.fsXl,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(top: 4),
+                            child: Text(
+                              "${item.age} · ${item.sex} · ${item.constellation}",
+                              style: const TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            );
           }).toList(),
         ),
       ),

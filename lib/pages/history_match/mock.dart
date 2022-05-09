@@ -7,10 +7,8 @@ class MockHistoryMatch {
   final String nickName;
   final int age;
 
-  /// 0 女
-  /// 1 男
-  /// 2 其他
-  final int sex;
+  ///  女 男 其他
+  final String sex;
   final String constellation;
   final String avatar;
 
@@ -27,7 +25,7 @@ class MockHistoryMatch {
       _data.add(MockHistoryMatch(
         nickName: mock.cname(),
         age: mock.integer(min: 18, max: 45),
-        sex: mock.pick([0, 1, 2]),
+        sex: mock.pick(["女", "男", "其他"]),
         constellation: mock.pick([
           "白羊座",
           "金牛座",
@@ -42,7 +40,8 @@ class MockHistoryMatch {
           "水瓶座",
           "双鱼座",
         ]),
-        avatar: '${WcaoConfig.cdn}/${mock.integer(min: 1, max: 12)}.svg',
+        avatar:
+            '${WcaoConfig.cdn}/avatar/profile/${mock.integer(min: 1, max: 12)}.svg',
       ));
     }
 

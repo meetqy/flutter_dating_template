@@ -23,6 +23,8 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 | ----------------------------------------------------------------------- | -------------- |
 | [flutter_native_splash](https://pub.dev/packages/flutter_native_splash) | 设置启动页     |
 | [group_button](https://pub.dev/packages/group_button)                   | checkbox group |
+| [getx](https://github.com/jonataslaw/getx)                              | 路由管理       |
+| [dart_mock](https://pub.dev/packages/dart_mock)                         | mock data      |
 
 ## 任务进度
 
@@ -31,7 +33,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 首页
 - [x] 匹配条件
 - [ ] 发现
-- [ ] 历史匹配
+- [x] 历史匹配
 - [ ] 社区
 - [ ] 话题详情
 - [ ] 消息通知

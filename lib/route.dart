@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/agreement/privacy.dart';
 import 'package:flutter_dating_template/pages/agreement/user.dart';
 import 'package:flutter_dating_template/pages/history_match/index.dart';
