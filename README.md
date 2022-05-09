@@ -15,7 +15,7 @@ Engine • revision 57d3bac3dd
 Tools • Dart 2.16.2 • DevTools 2.9.2
 ```
 
-## 特点
+## 快速了解
 
 🐱 迅速定位页面
 

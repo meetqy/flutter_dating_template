@@ -11,7 +11,7 @@ class UtillBase {
 
   /// https://pub.flutter-io.cn/packages/cached_network_image
   /// 缓存图片
-  static imageCache(String url) {
+  static Widget imageCache(String url) {
     return CachedNetworkImage(
       imageUrl: url,
       fit: BoxFit.fill,
