@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       getPages: getRoutes,
-      initialRoute: '/history-match',
+      initialRoute: '/home',
       builder: EasyLoading.init(),
     );
   }

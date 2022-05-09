@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/history_match/mock.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class HistoryMatch extends StatefulWidget {
@@ -31,7 +32,7 @@ class _HistoryMatchState extends State<HistoryMatch> {
   void _onLoading() async {
     await Future.delayed(const Duration(seconds: 1));
 
-    if (items.length > 120) {
+    if (items.length > 72) {
       return _refreshController.loadNoData();
     }
 
@@ -57,7 +58,10 @@ class _HistoryMatchState extends State<HistoryMatch> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back_ios),
+        leading: InkWell(
+          onTap: () => Get.back(),
+          child: const Icon(Icons.arrow_back_ios),
+        ),
         title: const Text('历史匹配'),
       ),
       body: SmartRefresher(

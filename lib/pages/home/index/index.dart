@@ -4,11 +4,12 @@ import 'package:flutter_dating_template/config.dart';
 import 'package:flutter_dating_template/pages/home/index/search_dialog.dart';
 import 'package:flutter_dating_template/utils/base.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:get/get.dart';
 
 import 'dart:math' as math;
 
 class PageViewIndex extends StatefulWidget {
-  PageViewIndex({Key? key}) : super(key: key);
+  const PageViewIndex({Key? key}) : super(key: key);
 
   @override
   State<PageViewIndex> createState() => _PageViewIndexState();
@@ -30,24 +31,31 @@ class _PageViewIndexState extends State<PageViewIndex> {
         AppBar(
           title: appBarTitle(),
           actions: [
-            Center(
-              child: Text(
-                '匹配历史',
-                style: TextStyle(
-                  color: WcaoTheme.base,
-                  fontSize: WcaoTheme.fsBase,
-                ),
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 6, right: 12),
-              width: 64,
-              child: Stack(
-                alignment: Alignment.centerLeft,
+            InkWell(
+              onTap: () => Get.toNamed('/history-match'),
+              child: Row(
                 children: [
-                  avatar('/avatar/1.jpg'),
-                  Positioned(left: 14, child: avatar('/avatar/2.jpg')),
-                  Positioned(left: 28, child: avatar('/avatar/3.jpg')),
+                  Center(
+                    child: Text(
+                      '匹配历史',
+                      style: TextStyle(
+                        color: WcaoTheme.base,
+                        fontSize: WcaoTheme.fsBase,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 6, right: 12),
+                    width: 64,
+                    child: Stack(
+                      alignment: Alignment.centerLeft,
+                      children: [
+                        avatar('/avatar/1.jpg'),
+                        Positioned(left: 14, child: avatar('/avatar/2.jpg')),
+                        Positioned(left: 28, child: avatar('/avatar/3.jpg')),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
