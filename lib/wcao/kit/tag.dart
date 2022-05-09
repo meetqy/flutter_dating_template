@@ -8,6 +8,7 @@ class Tag extends StatelessWidget {
     this.padding,
     this.color = Colors.black,
     this.borderRadius,
+    this.fontSize,
   }) : super(key: key);
 
   /// 文本
@@ -20,7 +21,11 @@ class Tag extends StatelessWidget {
   /// 背景颜色 color.withOpacity(.46)
   final Color? color;
 
+  /// borderRadius
   final BorderRadius? borderRadius;
+
+  /// fontSize
+  final double? fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +42,7 @@ class Tag extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          fontSize: WcaoTheme.fsSm,
+          fontSize: fontSize ?? WcaoTheme.fsSm,
           color: color,
         ),
       ),

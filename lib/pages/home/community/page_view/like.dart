@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/config.dart';
+import 'package:flutter_dating_template/pages/home/community/page_view/mock_like.dart';
 import 'package:flutter_dating_template/utils/base.dart';
 import 'package:flutter_dating_template/utils/theme.dart';
 import 'package:flutter_dating_template/wcao/kit/tag.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class PageViewLike extends StatefulWidget {
   const PageViewLike({Key? key}) : super(key: key);
@@ -12,142 +14,212 @@ class PageViewLike extends StatefulWidget {
 }
 
 class _PageViewLikeState extends State<PageViewLike> {
+  List<MockLike> items = [];
+
+  final RefreshController _refreshController =
+      RefreshController(initialRefresh: false);
+
+  void _onRefresh() async {
+    await Future.delayed(const Duration(milliseconds: 1000));
+    setState(() {
+      MockLike.clear();
+      items = MockLike.get();
+    });
+    _refreshController.refreshCompleted();
+  }
+
+  void _onLoading() async {
+    await Future.delayed(const Duration(milliseconds: 1000));
+    if (items.length > 60) {
+      _refreshController.loadNoData();
+    }
+
+    setState(() {
+      items = MockLike.get();
+    });
+    _refreshController.loadComplete();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    setState(() {
+      items = MockLike.get();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 12),
-      child: ListView.builder(
-        padding: EdgeInsets.zero,
-        itemBuilder: (context, index) {
-          return Card(
-            elevation: 0,
-            margin: const EdgeInsets.only(bottom: 4),
-            child: Padding(
-              padding: const EdgeInsets.all(24),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 44,
-                    height: 44,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(44),
-                      child: UtillBase.imageCache(
-                          '${WcaoConfig.cdn}/avatar/4.jpg'),
+      child: SmartRefresher(
+        controller: _refreshController,
+        onRefresh: _onRefresh,
+        onLoading: _onLoading,
+        enablePullDown: true,
+        enablePullUp: true,
+        child: ListView.builder(
+          padding: EdgeInsets.zero,
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            var item = items[index];
+            return Card(
+              elevation: 0,
+              margin: const EdgeInsets.only(bottom: 4),
+              child: Padding(
+                padding: const EdgeInsets.all(24),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: 44,
+                      height: 44,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(44),
+                        child: UtillBase.imageCache(item.avatar),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            '西瓜',
-                            style: TextStyle(
-                              color: WcaoTheme.base,
-                              fontWeight: FontWeight.bold,
-                              fontSize: WcaoTheme.fsL,
-                            ),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(top: 4),
-                            child: Text(
-                              "2021-09-20 10:30",
-                              style: TextStyle(
-                                color: WcaoTheme.secondary,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(top: 8),
-                            width: 172,
-                            height: 280,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4),
-                              image: DecorationImage(
-                                fit: BoxFit.fill,
-                                image: NetworkImage(
-                                    '${WcaoConfig.cdn}/phone/girls/1.jpg'),
-                              ),
-                            ),
-                            child: Icon(
-                              Icons.play_circle_fill,
-                              color: WcaoTheme.primary,
-                              size: WcaoTheme.fsBase * 4,
-                            ),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(top: 12),
-                            child: Text(
-                              "今天性情真好呀！",
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              item.nickName,
                               style: TextStyle(
                                 color: WcaoTheme.base,
+                                fontWeight: FontWeight.bold,
                                 fontSize: WcaoTheme.fsL,
                               ),
                             ),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(top: 12),
-                            child: Wrap(
-                              spacing: 12,
-                              children: [
-                                Tag(
-                                  "#日常记录",
-                                  borderRadius: BorderRadius.circular(24),
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 2,
-                                    horizontal: 8,
-                                  ),
-                                  color: WcaoTheme.primary,
+                            Container(
+                              margin: const EdgeInsets.only(top: 4),
+                              child: Text(
+                                item.time,
+                                style: TextStyle(
+                                  color: WcaoTheme.secondary,
                                 ),
-                                Tag(
-                                  "#时代少年团",
-                                  borderRadius: BorderRadius.circular(24),
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 2,
-                                    horizontal: 8,
-                                  ),
-                                  color: WcaoTheme.primary,
-                                ),
-                              ],
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(top: 12),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                // 分享
-                                iconText(Icons.offline_share, '21'),
-                                Row(
-                                  children: [
-                                    // 关注
-                                    iconText(
-                                        Icons.favorite_border_outlined, '21'),
+                            buildMedia(item.mediaType, item.media),
+                            Container(
+                              margin: const EdgeInsets.only(top: 12),
+                              child: Text(
+                                item.text,
+                                style: TextStyle(
+                                  color: WcaoTheme.base,
+                                  fontSize: WcaoTheme.fsL,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(top: 12),
+                              child: Wrap(
+                                  spacing: 12,
+                                  runSpacing: 6,
+                                  children: item.tag.map((e) {
+                                    return Tag(
+                                      e,
+                                      borderRadius: BorderRadius.circular(24),
+                                      fontSize: WcaoTheme.fsBase,
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 2,
+                                        horizontal: 8,
+                                      ),
+                                      color: WcaoTheme.primary,
+                                    );
+                                  }).toList()),
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(top: 12),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  // 分享
+                                  iconText(Icons.offline_share,
+                                      item.share.toString()),
+                                  Row(
+                                    children: [
+                                      // 关注
+                                      iconText(
+                                        Icons.favorite_border_outlined,
+                                        item.fav.toString(),
+                                      ),
 
-                                    // 评论
-                                    Container(
-                                      margin: const EdgeInsets.only(left: 24),
-                                      child: iconText(
-                                          Icons.add_comment_outlined, '21'),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          )
-                        ],
+                                      // 评论
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 24),
+                                        child: iconText(
+                                          Icons.add_comment_outlined,
+                                          item.comment.toString(),
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
+  }
+
+  /// 显示多媒体
+  Widget buildMedia(bool type, List<String> media) {
+    if (media.isEmpty) {
+      return Container();
+    }
+
+    if (type) {
+      // 视频
+      return Container(
+        margin: const EdgeInsets.only(top: 8),
+        width: 172,
+        height: 280,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(4),
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: NetworkImage(media[0]),
+          ),
+        ),
+        child: Icon(
+          Icons.play_circle_fill,
+          color: WcaoTheme.primary,
+          size: WcaoTheme.fsBase * 4,
+        ),
+      );
+    } else {
+      return Container(
+        margin: const EdgeInsets.only(top: 8),
+        child: Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          children: media
+              .map((e) => SizedBox(
+                    width: 124,
+                    height: 124,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: UtillBase.imageCache(e),
+                    ),
+                  ))
+              .toList(),
+        ),
+      );
+    }
   }
 
   Row iconText(IconData icondata, String text) {
