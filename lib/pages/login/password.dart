@@ -159,7 +159,7 @@ class _LoginState extends State<LoginPassword> {
   InkWell loginButton() {
     return InkWell(
       onTap: () {
-        // HACK: login
+        // HACK: 密码登录
       },
       child: Container(
         margin: const EdgeInsets.only(top: 36),

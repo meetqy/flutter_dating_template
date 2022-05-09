@@ -131,7 +131,7 @@ class _LoginState extends State<LoginVerifyCode> {
   InkWell loginButton() {
     return InkWell(
       onTap: () {
-        // HACK: login
+        // HACK: 验证码登录
       },
       child: Container(
         margin: const EdgeInsets.only(top: 36),

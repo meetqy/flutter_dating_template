@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PageViewMine extends StatefulWidget {
-  PageViewMine({Key? key}) : super(key: key);
+  const PageViewMine({Key? key}) : super(key: key);
 
   @override
   State<PageViewMine> createState() => _PageViewMineState();
@@ -10,7 +10,7 @@ class PageViewMine extends StatefulWidget {
 class _PageViewMineState extends State<PageViewMine> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('我的'),
     );
   }

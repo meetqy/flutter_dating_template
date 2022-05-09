@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
       body: PageView(
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
-        children: [
+        children: const [
           PageViewIndex(),
           PageViewCommunity(),
           PageViewMessage(),
