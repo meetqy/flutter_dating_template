@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       getPages: getRoutes,
-      initialRoute: '/home',
+      initialRoute: '/login/verify-code',
       builder: EasyLoading.init(),
     );
   }

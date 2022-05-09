@@ -1,6 +1,6 @@
 # flutter_dating_template
 
-flutter 版本的一个交友 app 模板
+flutter 版本的一个交友 app 模板。总页面 60+
 
 ## flutter 2.10.x 版本
 
@@ -41,6 +41,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 | [group_button](https://pub.dev/packages/group_button)                   | checkbox group |
 | [getx](https://github.com/jonataslaw/getx)                              | 路由管理       |
 | [dart_mock](https://pub.dev/packages/dart_mock)                         | mock data      |
+| [flutter_svg](https://pub.dev/packages/flutter_svg)                     | svg 展示       |
 
 ## 任务进度
 
@@ -48,9 +49,11 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 启动页
 - [x] 首页
 - [x] 匹配条件
-- [ ] 发现
 - [x] 历史匹配
 - [ ] 社区
+- [x] 社区/关注
+- [ ] 社区/推荐
+- [ ] 社区/发现
 - [ ] 话题详情
 - [ ] 消息通知
 - [ ] 用户中心
@@ -73,3 +76,16 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 ## 原型来源
 
 [社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)，有上线的需求可能需要提前询问作者。
+
+## 已完成页面
+
+![](./readme/preview/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.jpg)
+![](./readme/preview/%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.jpg)
+![](./readme/preview/%E7%A4%BE%E5%8C%BA-%E5%85%B3%E6%B3%A8.jpg)
+![](./readme/preview/%E7%99%BB%E5%BD%95-%E5%AF%86%E7%A0%81.jpg)
+![](./readme/preview/%E7%99%BB%E5%BD%95-%E9%AA%8C%E8%AF%81%E7%A0%81.jpg)
+![](./readme/preview/%E7%A4%BE%E5%8C%BA-%E5%85%B3%E6%B3%A8.jpg)
+![](./readme/preview/%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96.jpg)
+![](./readme/preview/%E9%A6%96%E9%A1%B5-%E5%8C%B9%E9%85%8D%E6%9D%A1%E4%BB%B6.jpg)
+![](./readme/preview/%E9%A6%96%E9%A1%B5-%E5%8E%86%E5%8F%B2%E5%8C%B9%E9%85%8D.jpg)
+![](./readme/preview/%E9%A6%96%E9%A1%B5.jpg)
