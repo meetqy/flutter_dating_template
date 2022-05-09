@@ -17,12 +17,13 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 ## 特点
 
-- 🐱 迅速定位页面
+🐱 迅速定位页面
+
   <p>&nbsp;</p>
 
-  ![](./readme/hack.png)
+![](./readme/hack.png)
 
-- ⚡ mock 数据和布局文件分离，便于直接使用
+⚡ mock 数据和布局文件分离，便于直接使用
 
 ```
 - history_match
@@ -30,7 +31,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
     - mock.dart     # mock实例文件
 ```
 
-- 🌊 基于 mockjs 创建的测试数据，表现更加真实
+🌊 基于 mockjs 创建的测试数据，表现更加真实
 
 ## 所用插件及作用
 
