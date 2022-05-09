@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/config.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/mock_like.dart';
-import 'package:flutter_dating_template/utils/base.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
 import 'package:flutter_dating_template/wcao/kit/tag.dart';
+import 'package:flutter_dating_template/wcao/utils/index.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+
+/// HACK: 社区-关注
 
 class PageViewLike extends StatefulWidget {
   const PageViewLike({Key? key}) : super(key: key);
@@ -77,7 +78,7 @@ class _PageViewLikeState extends State<PageViewLike> {
                       height: 44,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(44),
-                        child: UtillBase.imageCache(item.avatar),
+                        child: WcaoUtils.imageCache(item.avatar),
                       ),
                     ),
                     Expanded(
@@ -213,7 +214,7 @@ class _PageViewLikeState extends State<PageViewLike> {
                     height: 124,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(4),
-                      child: UtillBase.imageCache(e),
+                      child: WcaoUtils.imageCache(e),
                     ),
                   ))
               .toList(),

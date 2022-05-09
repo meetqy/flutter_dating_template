@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/utils/base.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:flutter_dating_template/wcao/utils/index.dart';
 
 class PasswordNewSet extends StatefulWidget {
   const PasswordNewSet({Key? key}) : super(key: key);
@@ -72,7 +72,7 @@ class _NewPasswordState extends State<PasswordNewSet> {
               ),
               InkWell(
                 onTap: () async {
-                  await UtillBase.toast('密码重置成功！');
+                  await WcaoUtils.toast('密码重置成功！');
                   Navigator.pushNamed(context, '/login/password');
                 },
                 child: Container(

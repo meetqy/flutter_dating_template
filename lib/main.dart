@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/route.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       getPages: getRoutes,
-      initialRoute: '/login/verify-code',
+      initialRoute: '/home',
       builder: EasyLoading.init(),
     );
   }

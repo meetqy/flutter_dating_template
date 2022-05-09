@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/login/widgets/head.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:get/get.dart';
 
 class LoginVerifyCode extends StatefulWidget {
   const LoginVerifyCode({Key? key}) : super(key: key);
@@ -132,6 +133,8 @@ class _LoginState extends State<LoginVerifyCode> {
     return InkWell(
       onTap: () {
         // HACK: 验证码登录
+
+        Get.offAndToNamed('/home');
       },
       child: Container(
         margin: const EdgeInsets.only(top: 36),

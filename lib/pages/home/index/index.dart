@@ -2,8 +2,8 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/config.dart';
 import 'package:flutter_dating_template/pages/home/index/search_dialog.dart';
-import 'package:flutter_dating_template/utils/base.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:flutter_dating_template/wcao/utils/index.dart';
 import 'package:get/get.dart';
 
 import 'dart:math' as math;
@@ -83,7 +83,7 @@ class _PageViewIndexState extends State<PageViewIndex> {
                             opacity: .25,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: UtillBase.imageCache(swipers[index]),
+                              child: WcaoUtils.imageCache(swipers[index]),
                             ),
                           ),
                         ),
@@ -97,7 +97,7 @@ class _PageViewIndexState extends State<PageViewIndex> {
                               width: boxWidth + 24,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
-                                child: UtillBase.imageCache(swipers[index]),
+                                child: WcaoUtils.imageCache(swipers[index]),
                               ),
                             ),
                             Positioned(

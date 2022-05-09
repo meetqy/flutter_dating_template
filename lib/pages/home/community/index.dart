@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/found.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/recommend.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
+
+/// HACK: 社区
 
 class PageViewCommunity extends StatefulWidget {
   const PageViewCommunity({Key? key}) : super(key: key);

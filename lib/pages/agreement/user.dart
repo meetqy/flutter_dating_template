@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:get/get.dart';
 
 class AgreementUser extends StatefulWidget {
   const AgreementUser({Key? key}) : super(key: key);
@@ -24,7 +25,10 @@ class _AgreementUserState extends State<AgreementUser> {
       appBar: AppBar(
         title: const Text("用户协议"),
         centerTitle: true,
-        leading: const Icon(Icons.arrow_back_ios),
+        leading: InkWell(
+          child: const Icon(Icons.arrow_back_ios),
+          onTap: () => Get.back(),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

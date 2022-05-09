@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/login/widgets/head.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:get/get.dart';
 
 class LoginPassword extends StatefulWidget {
   const LoginPassword({Key? key}) : super(key: key);
@@ -160,6 +161,8 @@ class _LoginState extends State<LoginPassword> {
     return InkWell(
       onTap: () {
         // HACK: 密码登录
+
+        Get.offAndToNamed('/home');
       },
       child: Container(
         margin: const EdgeInsets.only(top: 36),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/utils/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:get/get.dart';
 
 class AgreementPrivacy extends StatefulWidget {
   const AgreementPrivacy({Key? key}) : super(key: key);
@@ -24,7 +25,10 @@ class _AgreementPrivacyState extends State<AgreementPrivacy> {
       appBar: AppBar(
         title: const Text("隐私政策"),
         centerTitle: true,
-        leading: const Icon(Icons.arrow_back_ios),
+        leading: InkWell(
+          child: const Icon(Icons.arrow_back_ios),
+          onTap: () => Get.back(),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
