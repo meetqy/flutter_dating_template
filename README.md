@@ -77,16 +77,14 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 [社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)，有上线的需求可能需要提前询问作者。
 
-## 已完成页面
+## 所有页面截图
 
-<img width="375" src="./readme/preview/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.jpg"/>
-<img width="375" src="./readme/preview/%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.jpg"/>
-
-![](./readme/preview/%E7%A4%BE%E5%8C%BA-%E5%85%B3%E6%B3%A8.jpg)
-![](./readme/preview/%E7%99%BB%E5%BD%95-%E5%AF%86%E7%A0%81.jpg)
-![](./readme/preview/%E7%99%BB%E5%BD%95-%E9%AA%8C%E8%AF%81%E7%A0%81.jpg)
-![](./readme/preview/%E7%A4%BE%E5%8C%BA-%E5%85%B3%E6%B3%A8.jpg)
-![](./readme/preview/%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96.jpg)
-![](./readme/preview/%E9%A6%96%E9%A1%B5-%E5%8C%B9%E9%85%8D%E6%9D%A1%E4%BB%B6.jpg)
-![](./readme/preview/%E9%A6%96%E9%A1%B5-%E5%8E%86%E5%8F%B2%E5%8C%B9%E9%85%8D.jpg)
-![](./readme/preview/%E9%A6%96%E9%A1%B5.jpg)
+<img width="187.5" src="./readme/preview/登录-密码.jpg"/>
+<img width="187.5" src="./readme/preview/登录-验证码.jpg"/>
+<img width="187.5" src="./readme/preview/社区-关注.jpg"/>
+<img width="187.5" src="./readme/preview/首页-历史匹配.jpg"/>
+<img width="187.5" src="./readme/preview/首页-匹配条件.jpg"/>
+<img width="187.5" src="./readme/preview/首页.jpg"/>
+<img width="187.5" src="./readme/preview/忘记密码.jpg"/>
+<img width="187.5" src="./readme/preview/隐私政策.jpg"/>
+<img width="187.5" src="./readme/preview/用户协议.jpg"/>
