@@ -79,8 +79,9 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 ## 已完成页面
 
-![](./readme/preview/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.jpg)
-![](./readme/preview/%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.jpg)
+<img width="375" src="./readme/preview/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.jpg"/>
+<img width="375" src="./readme/preview/%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81.jpg"/>
+
 ![](./readme/preview/%E7%A4%BE%E5%8C%BA-%E5%85%B3%E6%B3%A8.jpg)
 ![](./readme/preview/%E7%99%BB%E5%BD%95-%E5%AF%86%E7%A0%81.jpg)
 ![](./readme/preview/%E7%99%BB%E5%BD%95-%E9%AA%8C%E8%AF%81%E7%A0%81.jpg)
