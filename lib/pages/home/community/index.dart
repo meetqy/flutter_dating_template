@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/pages/home/community/page_view/found.dart';
-import 'package:flutter_dating_template/pages/home/community/page_view/like.dart';
-import 'package:flutter_dating_template/pages/home/community/page_view/recommend.dart';
+import 'package:flutter_dating_template/pages/home/community/page_view/recommend/index.dart';
 import 'package:flutter_dating_template/wcao/kit/theme.dart';
+
+import 'page_view/found/index.dart';
+import 'page_view/like/index.dart';
 
 /// HACK: 社区
 

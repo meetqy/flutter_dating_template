@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/pages/home/community/page_view/mock_like.dart';
+import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
 import 'package:flutter_dating_template/wcao/kit/theme.dart';
 import 'package:flutter_dating_template/wcao/kit/tag.dart';
 import 'package:flutter_dating_template/wcao/utils/index.dart';
