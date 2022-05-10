@@ -50,8 +50,8 @@ class MockLike extends MockHistoryMatch {
 
   final int comment;
 
-  static List<MockLike> get() {
-    for (var i = 0; i < 12; i++) {
+  static List<MockLike> get({int num = 12}) {
+    for (var i = 0; i < num; i++) {
       var mockType = mock.boolean();
       _data.add(MockLike(
         nickName: mock.cname(),
