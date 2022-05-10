@@ -2,19 +2,6 @@
 
 flutter 版本的交友 app 模板，总计页面**35**个，测试数据基于 mockjs 创建。
 
-## flutter 2.10.x 版本
-
-```sh
-flutter --version
-```
-
-```sh
-Flutter 2.10.4 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision c860cba910 (5 weeks ago) • 2022-03-25 00:23:12 -0500
-Engine • revision 57d3bac3dd
-Tools • Dart 2.16.2 • DevTools 2.9.2
-```
-
 ## 快速了解
 
 🐱 迅速定位页面
@@ -31,6 +18,33 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 🌊 **不依赖于第三方 api**， 基于 mockjs 本地创建测试数据，更加稳定
 
+## 如何体验
+
+1. 下载安卓 apk，ios 暂时无法提供直接下载方案。
+
+### 本地预览
+
+**确保本地已经安装及正确配置 flutter** ✋🏻 [安装和环境配置](https://flutter.cn/docs/get-started/install)
+
+```
+git clone https://gitee.com/meetqy/flutter_dating_template
+```
+
+然后，vscode `F5` 可直接运行
+
+## flutter 2.10.x 版本
+
+```sh
+flutter --version
+```
+
+```sh
+Flutter 2.10.4 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision c860cba910 (5 weeks ago) • 2022-03-25 00:23:12 -0500
+Engine • revision 57d3bac3dd
+Tools • Dart 2.16.2 • DevTools 2.9.2
+```
+
 ## 所用插件及作用
 
 > 项目中所用的插件，均支持空安全。
@@ -45,6 +59,10 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 ## 任务进度
 
 - [x] 登录
+- [x] 登录/验证码登录
+- [x] 登录/密码登录
+- [x] 隐私政策
+- [x] 用户协议
 - [x] 启动页
 - [x] 首页
 - [x] 匹配条件
@@ -67,7 +85,6 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [ ] 设置
 - [ ] 账号设置
 - [ ] 隐私设置
-- [ ] 隐私政策
 - [ ] 编辑资料
 - [ ] 好友/粉丝
 - [ ] 访客
