@@ -41,7 +41,7 @@ class MockHistoryMatch {
           "双鱼座",
         ]),
         avatar:
-            '${WcaoConfig.cdn}/avatar/profile/${mock.integer(min: 1, max: 12)}.svg',
+            '${WcaoConfig.cdn}/avatar/profile/${mock.integer(min: 1, max: 19)}.jpg',
       ));
     }
 

@@ -41,7 +41,6 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 | [group_button](https://pub.dev/packages/group_button)                   | checkbox group |
 | [getx](https://github.com/jonataslaw/getx)                              | 路由管理       |
 | [dart_mock](https://pub.dev/packages/dart_mock)                         | mock data      |
-| [flutter_svg](https://pub.dev/packages/flutter_svg)                     | svg 展示       |
 
 ## 任务进度
 
@@ -77,7 +76,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 [社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)，有上线的需求可能需要提前询问作者。
 
-## 所有页面截图
+## 页面截图
 
 <img width="187.5" src="./readme/preview/登录-密码.jpg"/>
 <img width="187.5" src="./readme/preview/登录-验证码.jpg"/>

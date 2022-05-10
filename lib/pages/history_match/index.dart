@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/history_match/mock.dart';
 import 'package:flutter_dating_template/wcao/kit/theme.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_dating_template/wcao/utils/index.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -85,10 +85,7 @@ class _HistoryMatchState extends State<HistoryMatch> {
                     height: double.infinity,
                     child: ClipRRect(
                       borderRadius: WcaoTheme.radius,
-                      child: SvgPicture.network(
-                        item.avatar,
-                        fit: BoxFit.fill,
-                      ),
+                      child: WcaoUtils.imageCache(item.avatar),
                     ),
                   ),
                   Positioned(
