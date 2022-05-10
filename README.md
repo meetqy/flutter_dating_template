@@ -1,6 +1,6 @@
 # flutter_dating_template
 
-flutter 版本的一个交友 app 模板。总页面 60+
+flutter 版本的交友 app 模板，总计页面**35**个，测试数据基于 mockjs 创建。
 
 ## flutter 2.10.x 版本
 
@@ -29,7 +29,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
     - mock.dart     # mock实例文件
 ```
 
-🌊 基于 mockjs 创建的测试数据，表现更加真实
+🌊 **不依赖于第三方 api**， 基于 mockjs 本地创建测试数据，更加稳定
 
 ## 所用插件及作用
 
@@ -74,7 +74,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 ## 原型来源
 
-[社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)，有上线的需求可能需要提前询问作者。
+[社区交友 APP 原型](https://demo.axureshop.com/?url=https://cloud.axureshop.com/CDYHH2&buyurl=https://www.axureshop.com/a/1473981.html)，**我只购买了原型，有真实上线需求可能需要提前询问作者。**
 
 ## 页面截图
 
