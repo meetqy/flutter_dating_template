@@ -25,6 +25,9 @@ class WcaoTheme {
   /// outline
   static Color outline = const Color(0xffe4e4e4);
 
+  /// background color
+  static Color bgColor = const Color.fromRGBO(242, 242, 242, .4);
+
   /// radius
   static BorderRadius radius = BorderRadius.circular(8);
 

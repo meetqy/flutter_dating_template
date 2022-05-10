@@ -7,6 +7,7 @@ class Tag extends StatelessWidget {
     Key? key,
     this.padding,
     this.color = Colors.black,
+    this.backgroundColor,
     this.borderRadius,
     this.fontSize,
   }) : super(key: key);
@@ -27,6 +28,9 @@ class Tag extends StatelessWidget {
   /// fontSize
   final double? fontSize;
 
+  /// 背景颜色
+  final Color? backgroundColor;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,7 +40,7 @@ class Tag extends StatelessWidget {
             horizontal: 4,
           ),
       decoration: BoxDecoration(
-        color: color?.withOpacity(.25),
+        color: backgroundColor ?? color?.withOpacity(.25),
         borderRadius: borderRadius ?? BorderRadius.circular(0),
       ),
       child: Text(
