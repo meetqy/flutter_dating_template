@@ -136,6 +136,7 @@ class _PageViewLikeState extends State<PageViewLike> {
                             Container(
                               margin: const EdgeInsets.only(top: 12),
                               child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
