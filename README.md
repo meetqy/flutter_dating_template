@@ -53,10 +53,10 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 首页
 - [x] 匹配条件
 - [x] 历史匹配
-- [ ] 社区
+- [x] 社区
 - [x] 社区/关注
 - [x] 社区/推荐
-- [ ] 社区/发现
+- [x] 社区/发现
 - [ ] 话题详情
 - [ ] 消息通知
 - [ ] 用户中心
@@ -92,3 +92,4 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/隐私政策.jpg"/>
 <img width="187.5" src="./readme/preview/用户协议.jpg"/>
 <img width="187.5" src="./readme/preview/社区-推荐.jpg"/>
+<img width="187.5" src="./readme/preview/社区-发现.jpg"/>
