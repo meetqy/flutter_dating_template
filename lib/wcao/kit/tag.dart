@@ -10,6 +10,7 @@ class Tag extends StatelessWidget {
     this.backgroundColor,
     this.borderRadius,
     this.fontSize,
+    this.fontWeight,
   }) : super(key: key);
 
   /// 文本
@@ -31,6 +32,9 @@ class Tag extends StatelessWidget {
   /// 背景颜色
   final Color? backgroundColor;
 
+  /// fontWeight
+  final FontWeight? fontWeight;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,6 +52,7 @@ class Tag extends StatelessWidget {
         style: TextStyle(
           fontSize: fontSize ?? WcaoTheme.fsSm,
           color: color,
+          fontWeight: fontWeight,
         ),
       ),
     );
