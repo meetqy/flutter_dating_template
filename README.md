@@ -47,6 +47,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 登录
 - [x] 登录/验证码登录
 - [x] 登录/密码登录
+- [x] 忘记密码
 - [x] 隐私政策
 - [x] 用户协议
 - [x] 启动页
@@ -57,6 +58,8 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 社区/关注
 - [x] 社区/推荐
 - [x] 社区/发现
+- [x] 消息
+- [ ] 全局轮播图
 - [ ] 话题详情
 - [ ] 消息通知
 - [ ] 用户中心
@@ -64,7 +67,6 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [ ] 举报页面
 - [ ] 帖子详情页
 - [ ] 发布
-- [ ] 消息
 - [ ] 好友中心
 - [ ] 聊天页
 - [ ] 我的
@@ -93,3 +95,4 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/社区-关注.jpg"/>
 <img width="187.5" src="./readme/preview/社区-推荐.jpg"/>
 <img width="187.5" src="./readme/preview/社区-发现.jpg"/>
+<img width="187.5" src="./readme/preview/消息.jpg"/>
