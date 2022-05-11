@@ -11,10 +11,10 @@ class WcaoUtils {
 
   /// https://pub.flutter-io.cn/packages/cached_network_image
   /// 缓存图片
-  static Widget imageCache(String url) {
+  static Widget imageCache(String url, {BoxFit? fit}) {
     return CachedNetworkImage(
       imageUrl: url,
-      fit: BoxFit.fill,
+      fit: fit ?? BoxFit.fill,
       placeholder: (context, url) => CupertinoActivityIndicator(
         color: WcaoTheme.primary,
       ),

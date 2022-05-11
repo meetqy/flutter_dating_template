@@ -8,7 +8,7 @@ flutter 版本的交友 app 模板，总计页面**35**个，测试数据基于 
 
 ![](./readme/hack.png)
 
-⚡ mock 数据和布局文件分离，便于直接使用
+⚡ mock 数据分离
 
 ```
 - history_match
