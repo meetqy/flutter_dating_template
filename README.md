@@ -84,12 +84,12 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/登录-密码.jpg"/>
 <img width="187.5" src="./readme/preview/登录-验证码.jpg"/>
 <img width="187.5" src="./readme/preview/启动页.jpg"/>
-<img width="187.5" src="./readme/preview/社区-关注.jpg"/>
 <img width="187.5" src="./readme/preview/首页-历史匹配.jpg"/>
 <img width="187.5" src="./readme/preview/首页-匹配条件.jpg"/>
 <img width="187.5" src="./readme/preview/首页.jpg"/>
 <img width="187.5" src="./readme/preview/忘记密码.jpg"/>
 <img width="187.5" src="./readme/preview/隐私政策.jpg"/>
 <img width="187.5" src="./readme/preview/用户协议.jpg"/>
+<img width="187.5" src="./readme/preview/社区-关注.jpg"/>
 <img width="187.5" src="./readme/preview/社区-推荐.jpg"/>
 <img width="187.5" src="./readme/preview/社区-发现.jpg"/>
