@@ -59,6 +59,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 社区/推荐
 - [x] 社区/发现
 - [x] 消息
+- [x] 我的
 - [ ] 全局轮播图
 - [ ] 话题详情
 - [ ] 消息通知
@@ -69,7 +70,6 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [ ] 发布
 - [ ] 好友中心
 - [ ] 聊天页
-- [ ] 我的
 - [ ] 设置
 - [ ] 账号设置
 - [ ] 隐私设置
@@ -96,3 +96,4 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/社区-推荐.jpg"/>
 <img width="187.5" src="./readme/preview/社区-发现.jpg"/>
 <img width="187.5" src="./readme/preview/消息.jpg"/>
+<img width="187.5" src="./readme/preview/我的.gif"/>
