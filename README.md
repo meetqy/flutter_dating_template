@@ -99,4 +99,5 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/社区-发现.jpg"/>
 <img width="187.5" src="./readme/preview/消息.jpg"/>
 <img width="187.5" src="./readme/preview/我的.gif"/>
+<img width="187.5" src="./readme/preview/我的-设置.jpg"/>
 </div>

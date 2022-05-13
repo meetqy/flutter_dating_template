@@ -62,6 +62,7 @@ class _PageViewCommunityState extends State<PageViewCommunity>
   /// appbar
   AppBar setAppbar() {
     return AppBar(
+      automaticallyImplyLeading: false,
       title: Row(
         children: [
           Expanded(

@@ -22,14 +22,7 @@ class _AgreementPrivacyState extends State<AgreementPrivacy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("隐私政策"),
-        centerTitle: true,
-        leading: InkWell(
-          child: const Icon(Icons.arrow_back_ios),
-          onTap: () => Get.back(),
-        ),
-      ),
+      appBar: AppBar(title: const Text("隐私政策"), centerTitle: true),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

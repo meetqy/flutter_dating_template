@@ -25,10 +25,6 @@ class _AgreementUserState extends State<AgreementUser> {
       appBar: AppBar(
         title: const Text("用户协议"),
         centerTitle: true,
-        leading: InkWell(
-          child: const Icon(Icons.arrow_back_ios),
-          onTap: () => Get.back(),
-        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

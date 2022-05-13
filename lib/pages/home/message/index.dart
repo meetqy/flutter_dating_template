@@ -29,6 +29,7 @@ class _PageViewMessageState extends State<PageViewMessage> {
         child: Column(
           children: [
             AppBar(
+              automaticallyImplyLeading: false,
               title: const Text('聊天'),
               actions: [
                 IconButton(
