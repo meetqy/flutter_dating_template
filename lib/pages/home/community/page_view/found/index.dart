@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
-import 'package:flutter_dating_template/wcao/kit/theme.dart';
-import 'package:flutter_dating_template/wcao/utils/index.dart';
+import 'package:flutter_wcao/kit/index.dart';
+import 'package:flutter_wcao/ui/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 /// HACK: 社区-发现

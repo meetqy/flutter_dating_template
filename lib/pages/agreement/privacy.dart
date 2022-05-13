@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:flutter_wcao/ui/theme.dart';
 import 'package:get/get.dart';
 
 class AgreementPrivacy extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
-import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:flutter_wcao/ui/theme.dart';
 
 class PageViewMessage extends StatefulWidget {
   const PageViewMessage({Key? key}) : super(key: key);

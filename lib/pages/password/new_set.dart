@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/wcao/kit/theme.dart';
-import 'package:flutter_dating_template/wcao/utils/index.dart';
+import 'package:flutter_wcao/kit/index.dart';
+import 'package:flutter_wcao/ui/theme.dart';
 
 class PasswordNewSet extends StatefulWidget {
   const PasswordNewSet({Key? key}) : super(key: key);

@@ -5,7 +5,7 @@ import 'package:flutter_dating_template/pages/home/message/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/index.dart';
 import 'package:flutter_dating_template/state/token.dart';
 
-import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:flutter_wcao/ui/theme.dart';
 import 'package:get/get.dart';
 
 /// 首页 PageView Controller.

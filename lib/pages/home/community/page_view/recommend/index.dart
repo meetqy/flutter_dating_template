@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/config.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/widgets/publish_card.dart';
-import 'package:flutter_dating_template/wcao/kit/tag.dart';
-import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:flutter_wcao/ui/tag.dart';
+import 'package:flutter_wcao/ui/theme.dart';
 import 'package:dart_mock/dart_mock.dart' as mock;
 
 /// HACK: 社区-推荐
