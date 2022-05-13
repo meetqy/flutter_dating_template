@@ -83,7 +83,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 
 ## 页面截图
 
-<div style="display:flex">
+<center>
 <img width="187.5" src="./readme/preview/登录-密码.jpg"/>
 <img width="187.5" src="./readme/preview/登录-验证码.jpg"/>
 <img width="187.5" src="./readme/preview/启动页.jpg"/>
@@ -98,4 +98,4 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/社区-发现.jpg"/>
 <img width="187.5" src="./readme/preview/消息.jpg"/>
 <img width="187.5" src="./readme/preview/我的.gif"/>
-</div>
+</center>
