@@ -4,6 +4,7 @@ import 'package:flutter_dating_template/pages/home/mine/mock.dart';
 import 'package:flutter_dating_template/wcao/kit/tag.dart';
 import 'package:flutter_dating_template/wcao/kit/theme.dart';
 import 'package:flutter_dating_template/wcao/utils/index.dart';
+import 'package:get/get.dart';
 
 class PageViewMine extends StatefulWidget {
   const PageViewMine({Key? key}) : super(key: key);
@@ -44,7 +45,9 @@ class _PageViewMineState extends State<PageViewMine> {
                   size: WcaoTheme.fsBase * 1.6,
                   color: WcaoTheme.base,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed('/settings');
+                },
               )
             ],
             flexibleSpace: LayoutBuilder(
@@ -149,9 +152,12 @@ class _PageViewMineState extends State<PageViewMine> {
                     ),
                     Container(
                       margin: const EdgeInsets.only(top: 8),
+                      width: 300,
                       child: Text(
-                        '看看plmm',
-                        style: TextStyle(fontSize: WcaoTheme.fsL),
+                        item.text,
+                        style: TextStyle(
+                            fontSize: WcaoTheme.fsL,
+                            overflow: TextOverflow.ellipsis),
                       ),
                     )
                   ],

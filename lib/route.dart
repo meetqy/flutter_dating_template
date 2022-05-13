@@ -6,6 +6,7 @@ import 'package:flutter_dating_template/pages/login/password.dart';
 import 'package:flutter_dating_template/pages/login/verify_code.dart';
 import 'package:flutter_dating_template/pages/password/forget.dart';
 import 'package:flutter_dating_template/pages/password/new_set.dart';
+import 'package:flutter_dating_template/pages/settings/index.dart';
 import 'package:get/get.dart';
 
 List<GetPage<dynamic>> getRoutes = [
@@ -17,4 +18,5 @@ List<GetPage<dynamic>> getRoutes = [
   GetPage(name: '/agreement/user', page: () => const AgreementUser()),
   GetPage(name: '/agreement/privacy', page: () => const AgreementPrivacy()),
   GetPage(name: '/history-match', page: () => const HistoryMatch()),
+  GetPage(name: '/settings', page: () => const Settings()),
 ];
