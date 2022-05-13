@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/login/widgets/head.dart';
+import 'package:flutter_dating_template/state/token.dart';
 import 'package:flutter_dating_template/wcao/kit/theme.dart';
 import 'package:get/get.dart';
 
@@ -133,7 +134,7 @@ class _LoginState extends State<LoginVerifyCode> {
     return InkWell(
       onTap: () {
         // HACK: 验证码登录
-
+        TokenController.to.set();
         Get.offAndToNamed('/home');
       },
       child: Container(
@@ -209,9 +210,7 @@ class _LoginState extends State<LoginVerifyCode> {
               right: 0,
               bottom: 0,
               child: InkWell(
-                onTap: () {
-                  // print('123s');
-                },
+                onTap: () {},
                 child: Container(
                   padding: const EdgeInsets.only(right: 16),
                   alignment: Alignment.center,

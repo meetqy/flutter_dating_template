@@ -3,9 +3,12 @@ import 'package:flutter_dating_template/pages/home/community/index.dart';
 import 'package:flutter_dating_template/pages/home/index/index.dart';
 import 'package:flutter_dating_template/pages/home/message/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/index.dart';
+import 'package:flutter_dating_template/state/token.dart';
 
 import 'package:flutter_dating_template/wcao/kit/theme.dart';
+import 'package:get/get.dart';
 
+/// 首页 PageView Controller.
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -21,6 +24,19 @@ class _HomeState extends State<Home> {
   void dispose() {
     _pageController.dispose();
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    Get.put(TokenController());
+
+    Future.delayed(Duration.zero, () {
+      if (TokenController.to.token.isEmpty) {
+        Get.toNamed('/login/verify-code');
+      }
+    });
   }
 
   @override

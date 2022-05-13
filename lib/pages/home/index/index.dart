@@ -30,6 +30,7 @@ class _PageViewIndexState extends State<PageViewIndex> {
       children: [
         AppBar(
           title: appBarTitle(),
+          automaticallyImplyLeading: false,
           actions: [
             InkWell(
               onTap: () => Get.toNamed('/history-match'),
