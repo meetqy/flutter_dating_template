@@ -36,7 +36,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_easyloading: ^3.0.3
   card_swiper: ^2.0.3
-  cached_network_image: ^3.2.0
   get: ^4.6.1
   flutter_native_splash: ^2.1.6
   group_button: ^5.0.1
