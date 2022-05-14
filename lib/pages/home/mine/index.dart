@@ -56,6 +56,7 @@ class _PageViewMineState extends State<PageViewMine> {
                 bool isOpacity =
                     top == MediaQuery.of(context).padding.top + kToolbarHeight;
                 return FlexibleSpaceBar(
+                  centerTitle: true,
                   title: AnimatedOpacity(
                     duration: const Duration(microseconds: 300),
                     opacity: isOpacity ? 1 : 0,
