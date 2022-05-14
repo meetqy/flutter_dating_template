@@ -63,42 +63,37 @@ class _PageViewCommunityState extends State<PageViewCommunity>
   AppBar setAppbar() {
     return AppBar(
       automaticallyImplyLeading: false,
-      title: Row(
-        children: [
-          Expanded(
-            child: TabBar(
-              controller: _tabController,
-              indicatorColor: WcaoTheme.primary,
-              unselectedLabelColor: WcaoTheme.secondary,
-              unselectedLabelStyle:
-                  const TextStyle(fontWeight: FontWeight.normal),
-              labelColor: WcaoTheme.base,
-              labelStyle: TextStyle(
-                fontSize: WcaoTheme.fsXl,
-                fontWeight: FontWeight.bold,
-              ),
-              indicatorWeight: 4,
-              indicatorPadding: const EdgeInsets.symmetric(horizontal: 24),
-              tabs: _tabs,
-              onTap: (int page) {
-                setState(() {
-                  curPage = page;
-                  _pageController.jumpToPage(curPage);
-                });
-              },
-            ),
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            width: 150,
-            child: Icon(
-              Icons.email_outlined,
-              size: WcaoTheme.fsXl * 1.5,
-              color: WcaoTheme.base.withOpacity(.75),
-            ),
-          )
-        ],
+      centerTitle: false,
+      title: TabBar(
+        controller: _tabController,
+        indicatorColor: WcaoTheme.primary,
+        unselectedLabelColor: WcaoTheme.secondary,
+        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.normal),
+        labelColor: WcaoTheme.base,
+        labelStyle: TextStyle(
+          fontSize: WcaoTheme.fsXl,
+          fontWeight: FontWeight.bold,
+        ),
+        indicatorWeight: 4,
+        indicatorPadding: const EdgeInsets.symmetric(horizontal: 24),
+        tabs: _tabs,
+        onTap: (int page) {
+          setState(() {
+            curPage = page;
+            _pageController.jumpToPage(curPage);
+          });
+        },
       ),
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.email_outlined,
+            size: WcaoTheme.fsXl * 1.5,
+            color: WcaoTheme.base.withOpacity(.75),
+          ),
+        )
+      ],
     );
   }
 }
