@@ -77,20 +77,20 @@ class _PageViewIndexState extends State<PageViewIndex> {
                   ),
                   child: Stack(
                     children: [
-                      Center(
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 24),
-                          child: Opacity(
-                            opacity: .25,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: WcaoUtils.imageCache(swipers[index]),
-                            ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 12),
+                        padding: const EdgeInsets.symmetric(horizontal: 24),
+                        width: boxWidth,
+                        child: Opacity(
+                          opacity: .25,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: WcaoUtils.imageCache(swipers[index]),
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.only(top: 48),
+                        margin: const EdgeInsets.only(top: 24),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Stack(children: [
