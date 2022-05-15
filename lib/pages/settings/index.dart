@@ -3,6 +3,8 @@ import 'package:flutter_wcao/ui/cell.dart';
 import 'package:flutter_wcao/ui/theme.dart';
 import 'package:get/get.dart';
 
+/// HACK: 设置
+
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 

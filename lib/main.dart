@@ -63,6 +63,9 @@ class _MyAppState extends State<MyApp> {
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
             overlayColor: MaterialStateProperty.all(Colors.transparent),
+            textStyle: MaterialStateProperty.all(
+              TextStyle(color: WcaoTheme.primary),
+            ),
           ),
         ),
 

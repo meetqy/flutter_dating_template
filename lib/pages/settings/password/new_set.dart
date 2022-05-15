@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_wcao/kit/index.dart';
 import 'package:flutter_wcao/ui/theme.dart';
 
+/// HACK: 设置新密码
+
 class PasswordNewSet extends StatefulWidget {
   const PasswordNewSet({Key? key}) : super(key: key);
 
