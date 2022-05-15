@@ -73,7 +73,6 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [ ] 发布
 - [ ] 好友中心
 - [ ] 聊天页
-
 - [ ] 隐私设置
 - [ ] 编辑资料
 - [ ] 好友/粉丝
@@ -101,6 +100,6 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/消息.jpg"/>
 <img width="187.5" src="./readme/preview/我的.gif"/>
 <img width="187.5" src="./readme/preview/我的-设置.jpg"/>
-<img width="187.5" src="./readme/preview/账号设置.jpg"/>
-<img width="187.5" src="./readme/preview/修改密码.jpg"/>
+<img width="187.5" src="./readme/preview/账号设置.jpeg"/>
+<img width="187.5" src="./readme/preview/修改密码.jpeg"/>
 </div>
