@@ -182,10 +182,12 @@ packages:
   flutter_wcao:
     dependency: "direct main"
     description:
-      name: flutter_wcao
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.0.2"
+      path: "."
+      ref: main
+      resolved-ref: "1f2bb1987467b328ea1ad37e6b6045cc09bd6632"
+      url: "git@github.com:cu-yang/flutter_wcao.git"
+    source: git
+    version: "0.0.3"
   flutter_web_plugins:
     dependency: transitive
     description: flutter
