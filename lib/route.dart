@@ -5,6 +5,7 @@ import 'package:flutter_dating_template/pages/home/index.dart';
 import 'package:flutter_dating_template/pages/login/password.dart';
 import 'package:flutter_dating_template/pages/login/verify_code.dart';
 import 'package:flutter_dating_template/pages/settings/account/index.dart';
+import 'package:flutter_dating_template/pages/settings/account/logout.dart';
 import 'package:flutter_dating_template/pages/settings/account/update_phone.dart';
 import 'package:flutter_dating_template/pages/settings/account/update_phone2.dart';
 import 'package:flutter_dating_template/pages/settings/index.dart';
@@ -32,6 +33,7 @@ List<GetPage<dynamic>> getRoutes = [
   GetPage(
       name: '/settings/account/update-phone2',
       page: () => const AccountUpdatePhone2()),
+  GetPage(name: '/settings/account/logout', page: () => const AccountLogout()),
   GetPage(
       name: '/settings/notification', page: () => const SettingsNotification()),
 ];

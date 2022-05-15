@@ -3,7 +3,7 @@ import 'package:flutter_wcao/kit/index.dart';
 import 'package:flutter_wcao/ui/theme.dart';
 import 'package:get/get.dart';
 
-/// HACK: 账号设置-验证当前手机号
+/// HACK: 账号设置-更换手机号
 
 class AccountUpdatePhone2 extends StatefulWidget {
   const AccountUpdatePhone2({Key? key}) : super(key: key);
