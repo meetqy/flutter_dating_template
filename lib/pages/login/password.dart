@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/login/widgets/head.dart';
+import 'package:flutter_dating_template/state/token.dart';
 import 'package:flutter_wcao/ui/theme.dart';
 
 import 'package:get/get.dart';
+
+// HACK: 密码登录
 
 class LoginPassword extends StatefulWidget {
   const LoginPassword({Key? key}) : super(key: key);
@@ -161,9 +164,8 @@ class _LoginState extends State<LoginPassword> {
   InkWell loginButton() {
     return InkWell(
       onTap: () {
-        // HACK: 密码登录
-
-        Get.offAndToNamed('/home');
+        TokenController.to.set();
+        Get.offAllNamed('/home');
       },
       child: Container(
         margin: const EdgeInsets.only(top: 36),

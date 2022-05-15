@@ -135,7 +135,7 @@ class _LoginState extends State<LoginVerifyCode> {
       onTap: () {
         // HACK: 验证码登录
         TokenController.to.set();
-        Get.offAndToNamed('/home');
+        Get.offAllNamed('/home');
       },
       child: Container(
         margin: const EdgeInsets.only(top: 36),

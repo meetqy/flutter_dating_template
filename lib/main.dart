@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/route.dart';
+import 'package:flutter_dating_template/state/token.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_wcao/ui/theme.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -8,6 +9,7 @@ import 'package:get/get.dart';
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  Get.put(TokenController());
   runApp(const MyApp());
 }
 
