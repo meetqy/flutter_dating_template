@@ -4,10 +4,10 @@ import 'package:flutter_dating_template/pages/history_match/index.dart';
 import 'package:flutter_dating_template/pages/home/index.dart';
 import 'package:flutter_dating_template/pages/login/password.dart';
 import 'package:flutter_dating_template/pages/login/verify_code.dart';
-import 'package:flutter_dating_template/pages/password/forget.dart';
-import 'package:flutter_dating_template/pages/password/new_set.dart';
 import 'package:flutter_dating_template/pages/settings/account/index.dart';
 import 'package:flutter_dating_template/pages/settings/index.dart';
+import 'package:flutter_dating_template/pages/settings/password/forget.dart';
+import 'package:flutter_dating_template/pages/settings/password/new_set.dart';
 import 'package:get/get.dart';
 
 List<GetPage<dynamic>> getRoutes = [
