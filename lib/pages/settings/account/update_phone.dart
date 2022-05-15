@@ -1,58 +1,51 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_wcao/kit/index.dart';
 import 'package:flutter_wcao/ui/theme.dart';
+import 'package:get/get.dart';
 
-/// HACK: 设置新密码
+/// HACK: 账号设置-验证当前手机号
 
-class PasswordNewSet extends StatefulWidget {
-  const PasswordNewSet({Key? key}) : super(key: key);
+class AccountUpdatePhone extends StatefulWidget {
+  const AccountUpdatePhone({Key? key}) : super(key: key);
 
   @override
-  State<PasswordNewSet> createState() => _NewPasswordState();
+  State<AccountUpdatePhone> createState() => _AccountUpdatePhoneState();
 }
 
-class _NewPasswordState extends State<PasswordNewSet> {
+class _AccountUpdatePhoneState extends State<AccountUpdatePhone> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: InkWell(
-        onTap: () {
-          FocusManager.instance.primaryFocus?.unfocus();
-        },
-        child: Container(
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.symmetric(horizontal: 26),
-          margin: const EdgeInsets.only(bottom: 56),
+      backgroundColor: Colors.white,
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 48),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '设置新密码',
+                '更换手机号',
                 style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w500,
-                  color: WcaoTheme.base,
+                  fontSize: WcaoTheme.fsBase * 2,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 12),
                 child: Text(
-                  '密码至少8位，包含数字/字母/字符组合',
+                  '更换新手机号后，请重新登录APP',
                   style: TextStyle(color: WcaoTheme.secondary),
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 36),
+                margin: const EdgeInsets.only(top: 48),
                 height: 50,
                 child: TextField(
-                  keyboardType: TextInputType.visiblePassword,
-                  obscureText: true,
-                  enableSuggestions: false,
-                  autocorrect: false,
+                  keyboardType: TextInputType.phone,
+                  maxLength: 11,
                   decoration: InputDecoration(
-                    hintText: "请输入新密码",
+                    counterText: "",
+                    hintText: "请输入手机号码",
                     contentPadding:
                         const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
                     enabledBorder: OutlineInputBorder(
@@ -73,22 +66,24 @@ class _NewPasswordState extends State<PasswordNewSet> {
                 ),
               ),
               InkWell(
-                onTap: () async {
-                  await WcaoUtils.toast('密码重置成功！');
-                  Navigator.pushNamed(context, '/login/password');
+                onTap: () {
+                  Get.toNamed('/verify-code/update_phone');
                 },
                 child: Container(
-                  height: 50,
                   margin: const EdgeInsets.only(top: 36),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: WcaoTheme.radius,
-                    color: WcaoTheme.primary,
-                  ),
                   alignment: Alignment.center,
+                  width: double.infinity,
+                  height: 48,
+                  decoration: BoxDecoration(
+                    color: WcaoTheme.primary,
+                    borderRadius: WcaoTheme.radius,
+                  ),
                   child: const Text(
-                    '确认',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    '更换',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white),
                   ),
                 ),
               )
@@ -96,6 +91,6 @@ class _NewPasswordState extends State<PasswordNewSet> {
           ),
         ),
       ),
-    ));
+    );
   }
 }

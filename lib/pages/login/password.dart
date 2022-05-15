@@ -68,7 +68,7 @@ class _LoginState extends State<LoginPassword> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, '/password/forget');
+                          Get.toNamed('/verify-code/reset_password');
                         },
                         child: Text(
                           "忘记密码?",

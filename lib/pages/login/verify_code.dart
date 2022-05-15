@@ -4,6 +4,8 @@ import 'package:flutter_dating_template/state/token.dart';
 import 'package:flutter_wcao/ui/theme.dart';
 import 'package:get/get.dart';
 
+/// HACK: 验证码登录
+
 class LoginVerifyCode extends StatefulWidget {
   const LoginVerifyCode({Key? key}) : super(key: key);
 
