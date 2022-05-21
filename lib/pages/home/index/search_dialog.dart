@@ -32,16 +32,18 @@ class _SearchDialogState extends State<SearchDialog> {
   Widget build(BuildContext context) {
     return FractionallySizedBox(
       heightFactor: .9,
-      child: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              appbarTitle(context),
-              body(),
-            ],
-          ),
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          appbarTitle(context),
+          Expanded(
+            child: SingleChildScrollView(
+              child: SafeArea(
+                child: body(),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
