@@ -65,6 +65,8 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 修改密码
 - [x] 注销账号
 - [x] 消息通知
+- [x] 隐私设置
+- [x] 隐私/黑名单
 - [ ] 全局轮播图
 - [ ] 话题详情
 - [ ] 用户中心
@@ -74,7 +76,6 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [ ] 发布
 - [ ] 好友中心
 - [ ] 聊天页
-- [ ] 隐私设置
 - [ ] 编辑资料
 - [ ] 好友/粉丝
 - [ ] 访客
@@ -105,4 +106,6 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/修改密码.jpeg"/>
 <img width="187.5" src="./readme/preview/注销账号.gif"/>
 <img width="187.5" src="./readme/preview/消息通知.jpg"/>
+<img width="187.5" src="./readme/preview/设置-隐私.jpg"/>
+<img width="187.5" src="./readme/preview/隐私-黑名单.jpg"/>
 </div>
