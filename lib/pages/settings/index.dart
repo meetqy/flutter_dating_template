@@ -42,6 +42,9 @@ class _SettingsState extends State<Settings> {
                   '190M',
                   style: TextStyle(fontSize: WcaoTheme.fsL),
                 ),
+                onTap: () {
+                  bottomConfirm(context);
+                },
               ),
               Cell('关于我们'),
               Cell('退出登录', border: false),
@@ -49,6 +52,86 @@ class _SettingsState extends State<Settings> {
           ),
         ),
       ),
+    );
+  }
+
+  Future<dynamic> bottomConfirm(BuildContext context) {
+    return showModalBottomSheet(
+      backgroundColor: Colors.transparent,
+      context: context,
+      builder: (ctx) {
+        return Container(
+          height: 200,
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.only(top: 12),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      '清楚所有缓存记录',
+                      style: TextStyle(
+                        color: WcaoTheme.secondary,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () => Get.back(),
+                      child: Container(
+                        alignment: Alignment.center,
+                        margin: const EdgeInsets.only(top: 12),
+                        width: double.maxFinite,
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            top: BorderSide(
+                              width: 1,
+                              color: WcaoTheme.outline,
+                            ),
+                          ),
+                        ),
+                        child: Text(
+                          '清楚缓存',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: WcaoTheme.fsXl,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              InkWell(
+                onTap: () => Get.back(),
+                child: Container(
+                  margin: const EdgeInsets.only(top: 12),
+                  alignment: Alignment.center,
+                  width: double.maxFinite,
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    '取消',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontSize: WcaoTheme.fsXl,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }
