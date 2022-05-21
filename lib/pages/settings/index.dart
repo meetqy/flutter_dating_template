@@ -42,12 +42,14 @@ class _SettingsState extends State<Settings> {
                   '190M',
                   style: TextStyle(fontSize: WcaoTheme.fsL),
                 ),
-                onTap: () {
-                  bottomConfirm(context);
-                },
+                onTap: () => bottomConfirm(context),
               ),
-              Cell('关于我们'),
-              Cell('退出登录', border: false),
+              Cell('关于我们', onTap: () => Get.toNamed('/settings/about')),
+              Cell(
+                '退出登录',
+                border: false,
+                onTap: () => Get.offAndToNamed('/login/verify-code'),
+              ),
             ],
           ),
         ),

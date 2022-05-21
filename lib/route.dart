@@ -4,6 +4,7 @@ import 'package:flutter_dating_template/pages/history_match/index.dart';
 import 'package:flutter_dating_template/pages/home/index.dart';
 import 'package:flutter_dating_template/pages/login/password.dart';
 import 'package:flutter_dating_template/pages/login/verify_code.dart';
+import 'package:flutter_dating_template/pages/settings/about/index.dart';
 import 'package:flutter_dating_template/pages/settings/account/index.dart';
 import 'package:flutter_dating_template/pages/settings/account/logout.dart';
 import 'package:flutter_dating_template/pages/settings/account/update_phone.dart';
@@ -40,4 +41,5 @@ List<GetPage<dynamic>> getRoutes = [
       name: '/settings/notification', page: () => const SettingsNotification()),
   GetPage(name: '/settings/privacy', page: () => const SettingsPrivacy()),
   GetPage(name: '/settings/backlist', page: () => const SettingsBacklist()),
+  GetPage(name: '/settings/about', page: () => const SettingsAbout()),
 ];
