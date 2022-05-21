@@ -20,27 +20,33 @@ class _SettingsState extends State<Settings> {
         title: const Text("设置"),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Cell(
-              '账号安全',
-              onTap: () => Get.toNamed('/settings/account'),
-            ),
-            Cell(
-              '消息通知',
-              onTap: () => Get.toNamed('/settings/notification'),
-            ),
-            Cell('隐私设置'),
-            Cell(
-              '清除缓存',
-              right: Text(
-                '190M',
-                style: TextStyle(fontSize: WcaoTheme.fsL),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Column(
+            children: [
+              Cell(
+                '账号安全',
+                onTap: () => Get.toNamed('/settings/account'),
               ),
-            ),
-            Cell('关于我们'),
-            Cell('退出登录', border: false),
-          ],
+              Cell(
+                '消息通知',
+                onTap: () => Get.toNamed('/settings/notification'),
+              ),
+              Cell(
+                '隐私设置',
+                onTap: () => Get.toNamed('/settings/privacy'),
+              ),
+              Cell(
+                '清除缓存',
+                right: Text(
+                  '190M',
+                  style: TextStyle(fontSize: WcaoTheme.fsL),
+                ),
+              ),
+              Cell('关于我们'),
+              Cell('退出登录', border: false),
+            ],
+          ),
         ),
       ),
     );

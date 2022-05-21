@@ -8,10 +8,12 @@ import 'package:flutter_dating_template/pages/settings/account/index.dart';
 import 'package:flutter_dating_template/pages/settings/account/logout.dart';
 import 'package:flutter_dating_template/pages/settings/account/update_phone.dart';
 import 'package:flutter_dating_template/pages/settings/account/update_phone2.dart';
+import 'package:flutter_dating_template/pages/settings/backlist/index.dart';
 import 'package:flutter_dating_template/pages/settings/index.dart';
 import 'package:flutter_dating_template/pages/settings/notification/index.dart';
 import 'package:flutter_dating_template/pages/settings/password/reset.dart';
 import 'package:flutter_dating_template/pages/settings/password/update.dart';
+import 'package:flutter_dating_template/pages/settings/privacy/index.dart';
 import 'package:flutter_dating_template/pages/verify_code/index.dart';
 import 'package:get/get.dart';
 
@@ -36,4 +38,6 @@ List<GetPage<dynamic>> getRoutes = [
   GetPage(name: '/settings/account/logout', page: () => const AccountLogout()),
   GetPage(
       name: '/settings/notification', page: () => const SettingsNotification()),
+  GetPage(name: '/settings/privacy', page: () => const SettingsPrivacy()),
+  GetPage(name: '/settings/backlist', page: () => const SettingsBacklist()),
 ];
