@@ -140,15 +140,20 @@ class _PageViewRecommendState extends State<PageViewRecommend> {
                     image: NetworkImage(item['avatar']),
                   ),
                 ),
-                child: Tag(
-                  item['tag'],
-                  color: Colors.white,
-                  padding: const EdgeInsets.only(left: 4, right: 6),
-                  backgroundColor: WcaoTheme.primary,
-                  borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(12),
-                    bottomRight: Radius.circular(12),
-                  ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Tag(
+                      item['tag'],
+                      color: Colors.white,
+                      padding: const EdgeInsets.only(left: 4, right: 6),
+                      backgroundColor: WcaoTheme.primary,
+                      borderRadius: const BorderRadius.only(
+                        topRight: Radius.circular(12),
+                        bottomRight: Radius.circular(12),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             )
