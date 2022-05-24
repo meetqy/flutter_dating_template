@@ -69,6 +69,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 隐私/黑名单
 - [x] 清除缓存
 - [x] 关于我们
+- [x] 添加标签
 - [ ] 全局轮播图
 - [ ] 话题详情
 - [ ] 用户中心
@@ -112,4 +113,5 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/隐私-黑名单.jpg"/>
 <img width="187.5" src="./readme/preview/清楚缓存.jpg"/>
 <img width="187.5" src="./readme/preview/关于我们.jpg"/>
+<img width="187.5" src="./readme/preview/添加标签.jpg"/>
 </div>

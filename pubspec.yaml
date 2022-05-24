@@ -41,10 +41,7 @@ dependencies:
   group_button: ^5.0.1
   pull_to_refresh: ^2.0.0
   dart_mock: ^2.0.0
-  flutter_wcao: 
-    git:
-      url: git@github.com:cu-yang/flutter_wcao.git
-      ref: main
+  flutter_wcao: ^0.0.3+2
 
 dev_dependencies:
   flutter_test:

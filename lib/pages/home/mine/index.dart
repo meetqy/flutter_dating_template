@@ -285,16 +285,35 @@ class _PageViewMineState extends State<PageViewMine> {
               runSpacing: 6,
               children: List.generate(
                 mine.tags.length,
-                (index) => Tag(
-                  mine.tags[index],
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                  backgroundColor: Colors.black.withOpacity(.4),
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(24),
-                  fontSize: WcaoTheme.fsBase,
-                  fontWeight: FontWeight.bold,
-                ),
+                (index) {
+                  if (index >= mine.tags.length - 1) {
+                    // 添加标签
+                    return InkWell(
+                      onTap: () => Get.toNamed('/mine/add-tag'),
+                      child: Tag(
+                        '+',
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 24, vertical: 4),
+                        backgroundColor: Colors.black.withOpacity(.4),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(24),
+                        fontSize: WcaoTheme.fsBase,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    );
+                  } else {
+                    return Tag(
+                      mine.tags[index],
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 4),
+                      backgroundColor: Colors.black.withOpacity(.4),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(24),
+                      fontSize: WcaoTheme.fsBase,
+                      fontWeight: FontWeight.bold,
+                    );
+                  }
+                },
               ).toList(),
             ),
           ),

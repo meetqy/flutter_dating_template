@@ -2,6 +2,7 @@ import 'package:flutter_dating_template/pages/agreement/privacy.dart';
 import 'package:flutter_dating_template/pages/agreement/user.dart';
 import 'package:flutter_dating_template/pages/history_match/index.dart';
 import 'package:flutter_dating_template/pages/home/index.dart';
+import 'package:flutter_dating_template/pages/home/mine/add_tag/index.dart';
 import 'package:flutter_dating_template/pages/login/password.dart';
 import 'package:flutter_dating_template/pages/login/verify_code.dart';
 import 'package:flutter_dating_template/pages/settings/about/index.dart';
@@ -42,4 +43,5 @@ List<GetPage<dynamic>> getRoutes = [
   GetPage(name: '/settings/privacy', page: () => const SettingsPrivacy()),
   GetPage(name: '/settings/backlist', page: () => const SettingsBacklist()),
   GetPage(name: '/settings/about', page: () => const SettingsAbout()),
+  GetPage(name: "/mine/add-tag", page: () => const MineAddTag()),
 ];
