@@ -3,6 +3,9 @@ import 'package:flutter_dating_template/pages/agreement/user.dart';
 import 'package:flutter_dating_template/pages/history_match/index.dart';
 import 'package:flutter_dating_template/pages/home/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/add_tag/index.dart';
+import 'package:flutter_dating_template/pages/home/mine/fans/index.dart';
+import 'package:flutter_dating_template/pages/home/mine/firends/index.dart';
+import 'package:flutter_dating_template/pages/home/mine/visitors/index.dart';
 import 'package:flutter_dating_template/pages/login/password.dart';
 import 'package:flutter_dating_template/pages/login/verify_code.dart';
 import 'package:flutter_dating_template/pages/settings/about/index.dart';
@@ -44,4 +47,7 @@ List<GetPage<dynamic>> getRoutes = [
   GetPage(name: '/settings/backlist', page: () => const SettingsBacklist()),
   GetPage(name: '/settings/about', page: () => const SettingsAbout()),
   GetPage(name: "/mine/add-tag", page: () => const MineAddTag()),
+  GetPage(name: "/mine/visitors", page: () => const MineVisitors()),
+  GetPage(name: "/mine/firends", page: () => const MineFirends()),
+  GetPage(name: "/mine/fans", page: () => const MineFans()),
 ];

@@ -102,11 +102,20 @@ class _PageViewMineState extends State<PageViewMine> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  adapterItem(mine.visits, '访客'),
+                  InkWell(
+                    child: adapterItem(mine.visits, '访客'),
+                    onTap: () => Get.toNamed('/mine/visitors'),
+                  ),
                   adapterDrive(),
-                  adapterItem(mine.friends, '好友'),
+                  InkWell(
+                    child: adapterItem(mine.friends, '好友'),
+                    onTap: () => Get.toNamed('/mine/firends'),
+                  ),
                   adapterDrive(),
-                  adapterItem(mine.fans, '粉丝'),
+                  InkWell(
+                    child: adapterItem(mine.fans, '粉丝'),
+                    onTap: () => Get.toNamed('/mine/fans'),
+                  )
                 ],
               ),
             ),
