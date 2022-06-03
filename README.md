@@ -70,6 +70,9 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 清除缓存
 - [x] 关于我们
 - [x] 添加标签
+- [x] 我的/好友
+- [x] 我的/粉丝
+- [x] 我的/访客
 - [ ] 全局轮播图
 - [ ] 话题详情
 - [ ] 用户中心
@@ -77,11 +80,8 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [ ] 举报页面
 - [ ] 帖子详情页
 - [ ] 发布
-- [ ] 好友中心
 - [ ] 聊天页
 - [ ] 编辑资料
-- [ ] 好友/粉丝
-- [ ] 访客
 
 ## 原型来源
 
@@ -114,4 +114,5 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/清楚缓存.jpg"/>
 <img width="187.5" src="./readme/preview/关于我们.jpg"/>
 <img width="187.5" src="./readme/preview/我的-添加标签.gif"/>
+<img width="187.5" src="./readme/preview/我的-访客&好友&粉丝.gif"/>
 </div>
