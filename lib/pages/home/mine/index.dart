@@ -238,6 +238,7 @@ class _PageViewMineState extends State<PageViewMine> {
     );
   }
 
+  /// 个人信息
   Widget profile() {
     return Center(
       child: Column(

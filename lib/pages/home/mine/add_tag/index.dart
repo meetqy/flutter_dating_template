@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wcao/ui/tag.dart';
 import 'package:flutter_wcao/ui/theme.dart';
+import 'package:dart_mock/dart_mock.dart' as mock;
+import 'package:get/get.dart';
 
 class MineAddTag extends StatefulWidget {
   const MineAddTag({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class _MineAddTagState extends State<MineAddTag> {
         title: const Text('添加标签'),
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () => Get.back(),
             child: Text(
               '完成',
               style: TextStyle(color: WcaoTheme.base),
@@ -36,13 +38,13 @@ class _MineAddTagState extends State<MineAddTag> {
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                 color: WcaoTheme.primary.withOpacity(.25),
                 child: Wrap(
-                  alignment: WrapAlignment.center,
+                  alignment: WrapAlignment.start,
                   spacing: 12,
                   runSpacing: 12,
                   children: List.generate(
                     12,
                     (index) => Tag(
-                      '乐观注意',
+                      mock.ctitle(),
                       backgroundColor: WcaoTheme.primary,
                       color: Colors.white,
                       close: true,
@@ -108,11 +110,11 @@ class _MineAddTagState extends State<MineAddTag> {
     return Wrap(
       runSpacing: 12,
       spacing: 12,
-      alignment: WrapAlignment.spaceBetween,
+      alignment: WrapAlignment.start,
       children: List.generate(
         16,
         (index) => Tag(
-          '长得帅',
+          mock.ctitle(),
           border: Border.all(width: .5, color: WcaoTheme.outline),
           backgroundColor: Colors.white,
           color: WcaoTheme.base,
@@ -127,11 +129,11 @@ class _MineAddTagState extends State<MineAddTag> {
     return Wrap(
       runSpacing: 12,
       spacing: 12,
-      alignment: WrapAlignment.spaceBetween,
+      alignment: WrapAlignment.start,
       children: List.generate(
         16,
         (index) => Tag(
-          '钓鱼',
+          mock.county(),
           border: Border.all(width: .5, color: WcaoTheme.outline),
           backgroundColor: Colors.white,
           color: WcaoTheme.base,
@@ -148,9 +150,9 @@ class _MineAddTagState extends State<MineAddTag> {
       spacing: 12,
       alignment: WrapAlignment.spaceBetween,
       children: List.generate(
-        16,
+        5,
         (index) => Tag(
-          '90年代',
+          '${mock.integer(min: 6, max: 9)}0年代',
           border: Border.all(width: .5, color: WcaoTheme.outline),
           backgroundColor: Colors.white,
           color: WcaoTheme.base,
@@ -167,9 +169,9 @@ class _MineAddTagState extends State<MineAddTag> {
       spacing: 12,
       alignment: WrapAlignment.spaceBetween,
       children: List.generate(
-        16,
+        12,
         (index) => Tag(
-          '双鱼座',
+          "${mock.cword(min: 2)}座",
           border: Border.all(width: .5, color: WcaoTheme.outline),
           backgroundColor: Colors.white,
           color: WcaoTheme.base,
