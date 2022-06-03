@@ -144,24 +144,27 @@ class _PageViewMineState extends State<PageViewMine> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      item.time.split('T')[0],
-                      style: TextStyle(color: WcaoTheme.secondary),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(top: 8),
-                      width: 300,
-                      child: Text(
-                        item.text,
-                        style: TextStyle(
-                            fontSize: WcaoTheme.fsL,
-                            overflow: TextOverflow.ellipsis),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        item.time.split('T')[0],
+                        style: TextStyle(color: WcaoTheme.secondary),
                       ),
-                    )
-                  ],
+                      Container(
+                        margin: const EdgeInsets.only(top: 8),
+                        width: 300,
+                        child: Text(
+                          item.text,
+                          style: TextStyle(
+                            fontSize: WcaoTheme.fsL,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 IconButton(
                   icon: const Icon(Icons.more_horiz),
