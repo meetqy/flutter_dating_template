@@ -41,6 +41,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 | [group_button](https://pub.dev/packages/group_button)                   | checkbox group |
 | [getx](https://github.com/jonataslaw/getx)                              | 路由管理       |
 | [dart_mock](https://pub.dev/packages/dart_mock)                         | mock data      |
+| [scan](https://pub.dev/packages/scan)                                   | 扫描二维码     |
 
 ## 任务进度
 
@@ -73,6 +74,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 我的/好友
 - [x] 我的/粉丝
 - [x] 我的/访客
+- [x] 消息/扫一扫
 - [ ] 全局轮播图
 - [ ] 话题详情
 - [ ] 用户中心

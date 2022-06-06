@@ -387,6 +387,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.27.3"
+  scan:
+    dependency: "direct main"
+    description:
+      name: scan
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.6.0"
   sky_engine:
     dependency: transitive
     description: flutter

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
+import 'package:flutter_dating_template/pages/home/message/qr_scan.dart';
 import 'package:flutter_wcao/ui/theme.dart';
+import 'package:scan/scan.dart';
 
 class PageViewMessage extends StatefulWidget {
   const PageViewMessage({Key? key}) : super(key: key);
@@ -11,6 +13,7 @@ class PageViewMessage extends StatefulWidget {
 
 class _PageViewMessageState extends State<PageViewMessage> {
   List<MockLike> lists = [];
+  ScanController controller = ScanController();
 
   @override
   void initState() {
@@ -32,13 +35,62 @@ class _PageViewMessageState extends State<PageViewMessage> {
               automaticallyImplyLeading: false,
               title: const Text('聊天'),
               actions: [
-                IconButton(
-                  onPressed: () {},
+                PopupMenuButton(
                   icon: Icon(
                     Icons.add,
                     size: WcaoTheme.fsBase * 1.75,
                   ),
-                ),
+                  onSelected: (item) {
+                    if (item == 1) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => QrScan(),
+                        ),
+                      );
+                    }
+                  },
+                  itemBuilder: (BuildContext context) => [
+                    PopupMenuItem(
+                      child: const Text('扫一扫'),
+                      value: 1,
+                      onTap: () {
+                        // print(123);
+                        // Get.toNamed('/settings/account');
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (_) {
+                        //       print(456);
+                        //       return Container(
+                        //         width: 250,
+                        //         height: 250,
+                        //         color: Colors.red,
+                        //       );
+                        //     },
+                        //   ),
+                        // );
+                        // Navigator.push(
+                        //   ctx,
+                        //   MaterialPageRoute(builder: (_) {
+                        //     print(456);
+                        //     return Container(
+                        //       color: Colors.red,
+                        //       width: 250,
+                        //       height: 250,
+                        // child: ScanView(
+                        //   controller: controller,
+                        //   onCapture: (data) {},
+                        // ),
+                        //     );
+                        //     // return Container(width: 250,height: 250,child: ScanView(),)
+                        //   }),
+                        // );
+                      },
+                    ),
+                    const PopupMenuItem(child: Text('添加好友')),
+                  ],
+                )
               ],
             ),
             Expanded(
