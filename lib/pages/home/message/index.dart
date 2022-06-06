@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
+import 'package:flutter_dating_template/pages/home/message/firends_dialog.dart';
 import 'package:flutter_dating_template/pages/home/message/qr_scan.dart';
 import 'package:flutter_wcao/ui/theme.dart';
 import 'package:scan/scan.dart';
@@ -36,11 +37,12 @@ class _PageViewMessageState extends State<PageViewMessage> {
               title: const Text('聊天'),
               actions: [
                 PopupMenuButton(
+                  padding: EdgeInsets.zero,
                   icon: Icon(
                     Icons.add,
                     size: WcaoTheme.fsBase * 1.75,
                   ),
-                  onSelected: (item) {
+                  onSelected: (item) async {
                     if (item == 1) {
                       Navigator.push(
                         context,
@@ -48,47 +50,43 @@ class _PageViewMessageState extends State<PageViewMessage> {
                           builder: (_) => QrScan(),
                         ),
                       );
+                    } else if (item == 2) {
+                      showDialog(
+                        context: context,
+                        barrierDismissible: true,
+                        builder: (BuildContext context) =>
+                            const FirendsDialog(),
+                      );
                     }
                   },
                   itemBuilder: (BuildContext context) => [
                     PopupMenuItem(
-                      child: const Text('扫一扫'),
+                      padding: const EdgeInsets.only(left: 12),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.crop_free),
+                          Container(
+                            margin: const EdgeInsets.only(left: 8),
+                            child: const Text('扫一扫'),
+                          ),
+                        ],
+                      ),
                       value: 1,
-                      onTap: () {
-                        // print(123);
-                        // Get.toNamed('/settings/account');
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (_) {
-                        //       print(456);
-                        //       return Container(
-                        //         width: 250,
-                        //         height: 250,
-                        //         color: Colors.red,
-                        //       );
-                        //     },
-                        //   ),
-                        // );
-                        // Navigator.push(
-                        //   ctx,
-                        //   MaterialPageRoute(builder: (_) {
-                        //     print(456);
-                        //     return Container(
-                        //       color: Colors.red,
-                        //       width: 250,
-                        //       height: 250,
-                        // child: ScanView(
-                        //   controller: controller,
-                        //   onCapture: (data) {},
-                        // ),
-                        //     );
-                        //     // return Container(width: 250,height: 250,child: ScanView(),)
-                        //   }),
-                        // );
-                      },
                     ),
-                    const PopupMenuItem(child: Text('添加好友')),
+                    PopupMenuItem(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(Icons.how_to_reg),
+                          Container(
+                            margin: const EdgeInsets.only(left: 8),
+                            child: const Text('添加好友'),
+                          ),
+                        ],
+                      ),
+                      value: 2,
+                    ),
                   ],
                 )
               ],

@@ -75,6 +75,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 我的/粉丝
 - [x] 我的/访客
 - [x] 消息/扫一扫
+- [x] 消息/添加好友
 - [ ] 全局轮播图
 - [ ] 话题详情
 - [ ] 用户中心
@@ -117,4 +118,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187.5" src="./readme/preview/关于我们.jpg"/>
 <img width="187.5" src="./readme/preview/我的-添加标签.gif"/>
 <img width="187.5" src="./readme/preview/我的-访客&好友&粉丝.gif"/>
+<img width="187.5" src="./readme/preview/消息-功能.jpg"/>
+<img width="187.5" src="./readme/preview/消息-扫码.jpg"/>
+<img width="187.5" src="./readme/preview/消息-添加好友.jpg"/>
 </div>
