@@ -93,32 +93,32 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 ## 页面截图
 
 <div>
-<img width="187.5" src="./readme/preview/登录-密码.jpg"/>
-<img width="187.5" src="./readme/preview/登录-验证码.jpg"/>
-<img width="187.5" src="./readme/preview/启动页.jpg"/>
-<img width="187.5" src="./readme/preview/首页-历史匹配.jpg"/>
-<img width="187.5" src="./readme/preview/首页-匹配条件.jpg"/>
-<img width="187.5" src="./readme/preview/首页.jpg"/>
-<img width="187.5" src="./readme/preview/忘记密码.jpg"/>
-<img width="187.5" src="./readme/preview/隐私政策.jpg"/>
-<img width="187.5" src="./readme/preview/用户协议.jpg"/>
-<img width="187.5" src="./readme/preview/社区-关注.jpg"/>
-<img width="187.5" src="./readme/preview/社区-推荐.jpg"/>
-<img width="187.5" src="./readme/preview/社区-发现.jpg"/>
-<img width="187.5" src="./readme/preview/消息.jpg"/>
+<img width="187" src="./readme/preview/登录-密码.jpg"/>
+<img width="187" src="./readme/preview/登录-验证码.jpg"/>
+<img width="187" src="./readme/preview/启动页.jpg"/>
+<img width="187" src="./readme/preview/首页-历史匹配.jpg"/>
+<img width="187" src="./readme/preview/首页-匹配条件.jpg"/>
+<img width="187" src="./readme/preview/首页.jpg"/>
+<img width="187" src="./readme/preview/忘记密码.jpg"/>
+<img width="187" src="./readme/preview/隐私政策.jpg"/>
+<img width="187" src="./readme/preview/用户协议.jpg"/>
+<img width="187" src="./readme/preview/社区-关注.jpg"/>
+<img width="187" src="./readme/preview/社区-推荐.jpg"/>
+<img width="187" src="./readme/preview/社区-发现.jpg"/>
+<img width="187" src="./readme/preview/消息.jpg"/>
 <img width="187" src="./readme/preview/我的.gif"/>
-<img width="187.5" src="./readme/preview/我的-设置.jpg"/>
-<img width="187.5" src="./readme/preview/账号设置.jpeg"/>
-<img width="187.5" src="./readme/preview/修改密码.jpeg"/>
+<img width="187" src="./readme/preview/我的-设置.jpg"/>
+<img width="187" src="./readme/preview/账号设置.jpeg"/>
+<img width="187" src="./readme/preview/修改密码.jpeg"/>
 <img width="187" src="./readme/preview/注销账号.gif"/>
-<img width="187.5" src="./readme/preview/消息通知.jpg"/>
-<img width="187.5" src="./readme/preview/设置-隐私.jpg"/>
-<img width="187.5" src="./readme/preview/隐私-黑名单.jpg"/>
-<img width="187.5" src="./readme/preview/清楚缓存.jpg"/>
-<img width="187.5" src="./readme/preview/关于我们.jpg"/>
+<img width="187" src="./readme/preview/消息通知.jpg"/>
+<img width="187" src="./readme/preview/设置-隐私.jpg"/>
+<img width="187" src="./readme/preview/隐私-黑名单.jpg"/>
+<img width="187" src="./readme/preview/清楚缓存.jpg"/>
+<img width="187" src="./readme/preview/关于我们.jpg"/>
 <img width="187" src="./readme/preview/我的-添加标签.gif"/>
 <img width="187" src="./readme/preview/我的-访客&好友&粉丝.gif"/>
-<img width="187.5" src="./readme/preview/消息-功能.jpg"/>
-<img width="187.5" src="./readme/preview/消息-扫码.jpg"/>
-<img width="187.5" src="./readme/preview/消息-添加好友.jpg"/>
+<img width="187" src="./readme/preview/消息-功能.jpg"/>
+<img width="187" src="./readme/preview/消息-扫码.jpg"/>
+<img width="187" src="./readme/preview/消息-添加好友.jpg"/>
 </div>
