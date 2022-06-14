@@ -76,7 +76,7 @@ class _SettingsState extends State<Settings> {
                 child: Column(
                   children: [
                     Text(
-                      '清楚所有缓存记录',
+                      '清除所有缓存记录',
                       style: TextStyle(
                         color: WcaoTheme.secondary,
                       ),
@@ -97,7 +97,7 @@ class _SettingsState extends State<Settings> {
                           ),
                         ),
                         child: Text(
-                          '清楚缓存',
+                          '清除缓存',
                           style: TextStyle(
                             color: Colors.red,
                             fontWeight: FontWeight.bold,

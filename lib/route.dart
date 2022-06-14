@@ -2,6 +2,7 @@ import 'package:flutter_dating_template/pages/agreement/privacy.dart';
 import 'package:flutter_dating_template/pages/agreement/user.dart';
 import 'package:flutter_dating_template/pages/history_match/index.dart';
 import 'package:flutter_dating_template/pages/home/index.dart';
+import 'package:flutter_dating_template/pages/home/message/chat/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/add_tag/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/fans/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/firends/index.dart';
@@ -50,4 +51,5 @@ List<GetPage<dynamic>> getRoutes = [
   GetPage(name: "/mine/visitors", page: () => const MineVisitors()),
   GetPage(name: "/mine/firends", page: () => const MineFirends()),
   GetPage(name: "/mine/fans", page: () => const MineFans()),
+  GetPage(name: "/message/chat", page: () => const MessageChat()),
 ];

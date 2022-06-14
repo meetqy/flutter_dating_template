@@ -3,6 +3,7 @@ import 'package:flutter_dating_template/pages/home/community/page_view/like/mock
 import 'package:flutter_dating_template/pages/home/message/firends_dialog.dart';
 import 'package:flutter_dating_template/pages/home/message/qr_scan.dart';
 import 'package:flutter_wcao/ui/theme.dart';
+import 'package:get/get.dart';
 import 'package:scan/scan.dart';
 
 class PageViewMessage extends StatefulWidget {
@@ -47,7 +48,7 @@ class _PageViewMessageState extends State<PageViewMessage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => QrScan(),
+                          builder: (_) => const QrScan(),
                         ),
                       );
                     } else if (item == 2) {
@@ -97,7 +98,14 @@ class _PageViewMessageState extends State<PageViewMessage> {
                   children: [
                     search(),
                     Column(
-                      children: lists.map((e) => listCard(e)).toList(),
+                      children: lists
+                          .map(
+                            (e) => InkWell(
+                              child: listCard(e),
+                              onTap: () => Get.toNamed('/message/chat'),
+                            ),
+                          )
+                          .toList(),
                     ),
                   ],
                 ),

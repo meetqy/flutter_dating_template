@@ -121,4 +121,5 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187" src="./readme/preview/消息-功能.jpg"/>
 <img width="187" src="./readme/preview/消息-扫码.jpg"/>
 <img width="187" src="./readme/preview/消息-添加好友.jpg"/>
+<img width="187" src="./readme/preview/消息-聊天.gif"/>
 </div>
