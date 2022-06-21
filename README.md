@@ -42,8 +42,12 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 | [getx](https://github.com/jonataslaw/getx)                              | 路由管理       |
 | [dart_mock](https://pub.dev/packages/dart_mock)                         | mock data      |
 | [scan](https://pub.dev/packages/scan)                                   | 扫描二维码     |
+| [dotted_border](https://pub.dev/packages/dotted_border)                 | 边框虚线       |
 
 ## 任务进度
+
+<details>
+<summary>已完成</summary>
 
 - [x] 登录
 - [x] 登录/验证码登录
@@ -77,14 +81,22 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 - [x] 消息/扫一扫
 - [x] 消息/添加好友
 - [x] 消息-聊天页
+- [x] 发布动态-输入文本
+
+</details>
+
+<details>
+<summary>未完成/进行中</summary>
+
+- [ ] 发布
 - [ ] 全局轮播图
 - [ ] 话题详情
 - [ ] 用户中心
 - [ ] 聊天界面
 - [ ] 举报页面
 - [ ] 帖子详情页
-- [ ] 发布
 - [ ] 编辑资料
+</details>
 
 ## 原型来源
 
@@ -122,4 +134,5 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 <img width="187" src="./readme/preview/消息-扫码.jpg"/>
 <img width="187" src="./readme/preview/消息-添加好友.jpg"/>
 <img width="187" src="./readme/preview/消息-聊天.gif"/>
+<img width="187" src="./readme/preview/发布动态-输入文本.gif"/>
 </div>

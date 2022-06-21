@@ -7,6 +7,7 @@ import 'package:flutter_dating_template/pages/home/mine/add_tag/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/fans/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/firends/index.dart';
 import 'package:flutter_dating_template/pages/home/mine/visitors/index.dart';
+import 'package:flutter_dating_template/pages/home/publish/index.dart';
 import 'package:flutter_dating_template/pages/login/password.dart';
 import 'package:flutter_dating_template/pages/login/verify_code.dart';
 import 'package:flutter_dating_template/pages/settings/about/index.dart';
@@ -52,4 +53,5 @@ List<GetPage<dynamic>> getRoutes = [
   GetPage(name: "/mine/firends", page: () => const MineFirends()),
   GetPage(name: "/mine/fans", page: () => const MineFans()),
   GetPage(name: "/message/chat", page: () => const MessageChat()),
+  GetPage(name: "/publish", page: () => const Publish()),
 ];

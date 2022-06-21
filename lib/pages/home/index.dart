@@ -52,7 +52,9 @@ class _HomeState extends State<Home> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: WcaoTheme.primary,
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed('/publish');
+        },
         child: const Icon(
           Icons.add,
         ),
