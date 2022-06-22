@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/config.dart';
 import 'package:dart_mock/dart_mock.dart' as mock;
-import 'package:flutter_wcao/ui/theme.dart';
+import 'package:flutter_dating_template/wcao/ui/theme.dart';
 
 /// HACK: 消息-聊天
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
 import 'package:flutter_dating_template/pages/home/message/firends_dialog.dart';
 import 'package:flutter_dating_template/pages/home/message/qr_scan.dart';
-import 'package:flutter_wcao/ui/theme.dart';
+import 'package:flutter_dating_template/wcao/ui/theme.dart';
 import 'package:get/get.dart';
 import 'package:scan/scan.dart';
 

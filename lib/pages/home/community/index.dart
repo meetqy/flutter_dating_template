@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/recommend/index.dart';
-import 'package:flutter_wcao/ui/theme.dart';
+import 'package:flutter_dating_template/wcao/ui/theme.dart';
 
 import 'page_view/found/index.dart';
 import 'page_view/like/index.dart';

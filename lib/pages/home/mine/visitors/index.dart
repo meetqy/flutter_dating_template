@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
-import 'package:flutter_wcao/ui/theme.dart';
+import 'package:flutter_dating_template/wcao/ui/theme.dart';
 import 'package:dart_mock/dart_mock.dart' as mock;
 
 class MineVisitors extends StatefulWidget {

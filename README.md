@@ -43,6 +43,7 @@ Tools • Dart 2.16.2 • DevTools 2.9.2
 | [dart_mock](https://pub.dev/packages/dart_mock)                         | mock data      |
 | [scan](https://pub.dev/packages/scan)                                   | 扫描二维码     |
 | [dotted_border](https://pub.dev/packages/dotted_border)                 | 边框虚线       |
+| [cached_network_image](https://pub.dev/packages/cached_network_image)   | 图片缓存       |
 
 ## 任务进度
 

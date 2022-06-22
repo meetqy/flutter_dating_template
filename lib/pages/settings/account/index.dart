@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_wcao/ui/cell.dart';
+import 'package:flutter_dating_template/wcao/ui/cell.dart';
 import 'package:get/get.dart';
 
 /// HACK: 账户设置

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
-import 'package:flutter_wcao/kit/index.dart';
-import 'package:flutter_wcao/ui/tag.dart';
-import 'package:flutter_wcao/ui/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/index.dart';
+import 'package:flutter_dating_template/wcao/ui/tag.dart';
+import 'package:flutter_dating_template/wcao/ui/theme.dart';
 
 class PublishCard extends StatelessWidget {
   const PublishCard(this.item, {Key? key}) : super(key: key);

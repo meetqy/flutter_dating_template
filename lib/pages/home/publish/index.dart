@@ -1,7 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_wcao/kit/index.dart';
-import 'package:flutter_wcao/ui/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/index.dart';
+import 'package:flutter_dating_template/wcao/ui/theme.dart';
 
 class Publish extends StatefulWidget {
   const Publish({Key? key}) : super(key: key);

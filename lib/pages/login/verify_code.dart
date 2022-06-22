@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/pages/login/widgets/head.dart';
 import 'package:flutter_dating_template/state/token.dart';
-import 'package:flutter_wcao/ui/theme.dart';
+import 'package:flutter_dating_template/wcao/ui/theme.dart';
 import 'package:get/get.dart';
 
 /// HACK: 验证码登录

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_wcao/ui/cell.dart';
+import 'package:flutter_dating_template/wcao/ui/cell.dart';
 
 /// HACK: 消息通知
 

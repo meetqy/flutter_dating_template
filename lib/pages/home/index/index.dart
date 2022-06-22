@@ -2,8 +2,8 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_template/config.dart';
 import 'package:flutter_dating_template/pages/home/index/search_dialog.dart';
-import 'package:flutter_wcao/kit/index.dart';
-import 'package:flutter_wcao/ui/theme.dart';
+import 'package:flutter_dating_template/wcao/kit/index.dart';
+import 'package:flutter_dating_template/wcao/ui/theme.dart';
 import 'package:get/get.dart';
 
 import 'dart:math' as math;
