@@ -31,6 +31,14 @@ Engine • revision 57d3bac3dd
 Tools • Dart 2.16.2 • DevTools 2.9.2
 ```
 
+## 随机动漫图片
+
+```js
+https://rao.pics/api/image/random
+```
+
+仓库地址: [Github](https://github.com/meetqy/eagleuse/blob/dev/readme/api/image.md)
+
 ## 所用插件及作用
 
 > 项目中所用的插件，均支持空安全。
