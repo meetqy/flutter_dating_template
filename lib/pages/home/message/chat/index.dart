@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/config.dart';
 import 'package:dart_mock/dart_mock.dart' as mock;
+import 'package:flutter_dating_template/wcao/kit/index.dart';
 import 'package:flutter_dating_template/wcao/ui/theme.dart';
 
 /// HACK: 消息-聊天
@@ -124,7 +124,7 @@ class _MessageChatState extends State<MessageChat> {
       ),
       CircleAvatar(
         backgroundImage: NetworkImage(
-          '${WcaoConfig.cdn}/avatar/profile/${right ? 2 : mock.integer(min: 6, max: 10)}.jpg',
+          WcaoUtils.getRandomImage(),
         ),
       )
     ];

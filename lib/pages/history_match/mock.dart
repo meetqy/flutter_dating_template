@@ -1,5 +1,5 @@
 import 'package:dart_mock/dart_mock.dart' as mock;
-import 'package:flutter_dating_template/config.dart';
+import 'package:flutter_dating_template/wcao/kit/index.dart';
 
 class MockHistoryMatch {
   static final List<MockHistoryMatch> _data = [];
@@ -40,8 +40,7 @@ class MockHistoryMatch {
           "水瓶座",
           "双鱼座",
         ]),
-        avatar:
-            '${WcaoConfig.cdn}/avatar/profile/${mock.integer(min: 1, max: 19)}.jpg',
+        avatar: WcaoUtils.getRandomImage(),
       ));
     }
 

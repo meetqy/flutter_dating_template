@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/config.dart';
+import 'package:flutter_dating_template/wcao/kit/index.dart';
 import 'package:flutter_dating_template/wcao/ui/theme.dart';
 
 class SettingsBacklist extends StatefulWidget {
@@ -40,7 +40,7 @@ class _SettingsBacklistState extends State<SettingsBacklist> {
                       margin: const EdgeInsets.only(right: 12),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(28),
-                        child: Image.network('${WcaoConfig.cdn}/avatar/1.jpg'),
+                        child: Image.network(WcaoUtils.getRandomImage()),
                       ),
                     ),
                     Expanded(

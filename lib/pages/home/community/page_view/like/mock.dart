@@ -1,6 +1,6 @@
 import 'package:flutter_dating_template/pages/history_match/mock.dart';
 import 'package:dart_mock/dart_mock.dart' as mock;
-import 'package:flutter_dating_template/config.dart';
+import 'package:flutter_dating_template/wcao/kit/index.dart';
 
 class MockLike extends MockHistoryMatch {
   MockLike({
@@ -71,15 +71,15 @@ class MockLike extends MockHistoryMatch {
           "水瓶座",
           "双鱼座",
         ]),
-        avatar: '${WcaoConfig.cdn}/avatar/${mock.integer(min: 1, max: 18)}.jpg',
+        avatar: WcaoUtils.getRandomImage(),
         tag: List.generate(mock.integer(min: 1, max: 4),
             (index) => '#${mock.ctitle(min: 3, max: 10)}'),
         mediaType: mockType,
         media: List.generate(mock.integer(min: 0, max: 4), (index) {
           if (mockType) {
-            return '${WcaoConfig.cdn}/phone/girls/${mock.integer(min: 1, max: 5)}.jpg';
+            return WcaoUtils.getRandomImage();
           } else {
-            return '${WcaoConfig.cdn}/avatar/profile/${mock.integer(min: 1, max: 19)}.jpg';
+            return WcaoUtils.getRandomImage();
           }
         }),
         share: mock.integer(min: 1, max: 99),

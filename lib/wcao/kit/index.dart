@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_dating_template/wcao/ui/theme.dart';
 
+const assetHost = 'http://localhost:3000/api/image/random';
+
 class WcaoUtils {
   /// toast
   static toast(String msg) async {
@@ -34,5 +36,9 @@ class WcaoUtils {
         color: Colors.redAccent,
       ),
     );
+  }
+
+  static String getRandomImage() {
+    return '$assetHost?t=${DateTime.now()}';
   }
 }

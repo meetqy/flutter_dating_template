@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/config.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/like/mock.dart';
 import 'package:flutter_dating_template/pages/home/community/page_view/widgets/publish_card.dart';
+import 'package:flutter_dating_template/wcao/kit/index.dart';
 import 'package:flutter_dating_template/wcao/ui/tag.dart';
 import 'package:flutter_dating_template/wcao/ui/theme.dart';
 import 'package:dart_mock/dart_mock.dart' as mock;
@@ -22,8 +22,7 @@ class _PageViewRecommendState extends State<PageViewRecommend> {
   /// 热门话题
   List<Map> list = List.generate(mock.integer(min: 4, max: 12), (index) {
     return {
-      "avatar":
-          '${WcaoConfig.cdn}/avatar/profile/${mock.integer(min: 1, max: 19)}.jpg',
+      "avatar": WcaoUtils.getRandomImage(),
       "tag": mock.cword(min: 2, max: 4)
     };
   });

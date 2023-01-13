@@ -1,6 +1,5 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_template/config.dart';
 import 'package:flutter_dating_template/pages/home/index/search_dialog.dart';
 import 'package:flutter_dating_template/wcao/kit/index.dart';
 import 'package:flutter_dating_template/wcao/ui/theme.dart';
@@ -17,10 +16,10 @@ class PageViewIndex extends StatefulWidget {
 
 class _PageViewIndexState extends State<PageViewIndex> {
   List<String> swipers = [
-    "${WcaoConfig.cdn}/phone/girls/1.jpg",
-    "${WcaoConfig.cdn}/phone/girls/2.jpg",
-    "${WcaoConfig.cdn}/phone/girls/3.jpg",
-    "${WcaoConfig.cdn}/phone/girls/4.jpg",
+    WcaoUtils.getRandomImage(),
+    WcaoUtils.getRandomImage(),
+    WcaoUtils.getRandomImage(),
+    WcaoUtils.getRandomImage(),
   ];
 
   @override
@@ -258,7 +257,7 @@ class _PageViewIndexState extends State<PageViewIndex> {
       ),
       child: CircleAvatar(
         radius: 10,
-        backgroundImage: NetworkImage(WcaoConfig.cdn + url),
+        backgroundImage: NetworkImage(WcaoUtils.getRandomImage()),
       ),
     );
   }
